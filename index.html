@@ -3,225 +3,335 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bella Studio — Salão de Beleza</title>
+  <meta name="description" content="Criamos landing pages e hotsites de alta conversão com integração de APIs e automações. Solicite sua proposta grátis." />
+  <title>HotSite Pro — Landing Pages que Vendem</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="logo">Bella Studio</a>
-    <ul class="nav-links">
-      <li><a href="#features">Serviços</a></li>
-      <li><a href="#how">Como funciona</a></li>
-      <li><a href="#pricing">Tabela de preços</a></li>
-    </ul>
-    <a href="#pricing" class="btn btn-primary">Agendar agora</a>
-  </nav>
+<!-- ═══════════════════════════ NAV ════════════════════════════ -->
+<header class="nav-header" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-icon">⚡</span> HotSite<strong>Pro</strong>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#proposta">Falar com especialista</a>
+    </nav>
+    <a href="#proposta" class="btn btn-primary nav-cta">Solicitar proposta</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <i class="bi bi-list"></i>
+    </button>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-badge"><span></span> Salão premiado · São Paulo</div>
-      <h1>Beleza que<br/><em>transforma</em><br/>sua autoestima.</h1>
-      <p>Cuidamos de você do cabelo às unhas. Profissionais especializados, ambiente aconchegante e agendamento fácil pelo WhatsApp.</p>
-      <div class="hero-cta">
-        <a href="https://wa.me/5511999999999" class="btn btn-primary">💬 Agendar pelo WhatsApp</a>
-        <a href="#features" class="btn btn-outline">Ver serviços</a>
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg-circles">
+    <span class="circle c1"></span>
+    <span class="circle c2"></span>
+    <span class="circle c3"></span>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <i class="bi bi-lightning-charge-fill"></i> +200 projetos entregues
       </div>
-      <p class="hero-note" style="margin-top:1rem;">Seg–Sab: 9h às 20h &nbsp;·&nbsp; Dom: 9h às 15h</p>
+      <h1>Landing pages que<br /><em>convertem visitantes</em><br />em clientes reais.</h1>
+      <p class="hero-sub">Desenvolvemos hotsites e landing pages de alta performance com integração de APIs, automações e envio de propostas — prontos em até 5 dias úteis.</p>
+      <div class="hero-actions">
+        <a href="#proposta" class="btn btn-primary btn-lg">
+          <i class="bi bi-send-fill"></i> Solicitar proposta grátis
+        </a>
+        <a href="#como-funciona" class="btn btn-ghost btn-lg">
+          Ver como funciona <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><i class="bi bi-check-circle-fill"></i> Sem contrato longo</div>
+        <div class="trust-item"><i class="bi bi-check-circle-fill"></i> Entrega em 5 dias</div>
+        <div class="trust-item"><i class="bi bi-check-circle-fill"></i> Suporte incluso</div>
+      </div>
     </div>
     <div class="hero-visual">
-      <div class="salon-mock">
-        <div class="salon-avatar">✂️</div>
-        <div class="salon-tag">Bella Studio</div>
-        <div class="salon-pills">
-          <span class="pill">Cabelo</span>
-          <span class="pill">Unhas</span>
-          <span class="pill">Estética</span>
+      <div class="mockup-card">
+        <div class="mockup-bar">
+          <span></span><span></span><span></span>
+          <div class="mockup-url">hotsite.pro/minha-empresa</div>
         </div>
-        <div class="salon-rating">★★★★★ <strong>4.9</strong> · +800 avaliações</div>
+        <div class="mockup-body">
+          <div class="mockup-hero-block">
+            <div class="mh-badge">✅ Proposta aprovada!</div>
+            <div class="mh-title"></div>
+            <div class="mh-sub"></div>
+            <div class="mh-btn"></div>
+          </div>
+          <div class="mockup-stats">
+            <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Aprovação</span></div>
+            <div class="stat"><span class="stat-num">5d</span><span class="stat-label">Entrega</span></div>
+            <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Suporte</span></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- LOGOS -->
-  <div class="logos-section">
-    <p>Reconhecida pelos melhores do setor</p>
-    <div class="logos-row">
-      <span class="logo-item">Vogue Brasil</span>
-      <span class="logo-item">Elle</span>
-      <span class="logo-item">Marie Claire</span>
-      <span class="logo-item">Top Beauty</span>
-      <span class="logo-item">Salão do Ano</span>
+      <div class="float-tag tag1"><i class="bi bi-envelope-check-fill"></i> E-mail enviado!</div>
+      <div class="float-tag tag2"><i class="bi bi-graph-up-arrow"></i> +320% conversão</div>
     </div>
   </div>
+</section>
 
-  <!-- SERVICES -->
-  <section class="features" id="features">
-    <p class="section-label">Serviços</p>
-    <h2 class="section-title">Tudo que você merece</h2>
-    <p class="section-sub">Do corte à coloração, das unhas ao relaxamento. Feito com amor e técnica para realçar sua beleza única.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">✂️</div>
-        <h3>Corte & Escova</h3>
-        <p>Cortes modernos e escova modeladora com produtos profissionais para cabelos saudáveis.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎨</div>
-        <h3>Coloração & Mechas</h3>
-        <p>Loiro, ruivo, castanho ou fantasia — usamos coloração premium para um resultado duradouro.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💅</div>
-        <h3>Manicure & Pedicure</h3>
-        <p>Unhas impecáveis com gel, acrílico, fibra ou esmaltação em centenas de cores.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💆</div>
-        <h3>Tratamentos Capilares</h3>
-        <p>Botox, cronograma capilar, hidratação profunda e nutrição para cabelos danificados.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">✨</div>
-        <h3>Design de Sobrancelha</h3>
-        <p>Micropigmentação, henna e design personalizado para harmonizar seu rosto.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💄</div>
-        <h3>Maquiagem</h3>
-        <p>Maquiagem social, festa ou noiva — produção completa para seu evento especial.</p>
-      </div>
+<!-- ═══════════════════════ SOCIAL PROOF ══════════════════════ -->
+<div class="social-proof">
+  <div class="container">
+    <p class="sp-label">Empresas que já transformaram seus resultados</p>
+    <div class="sp-logos">
+      <span>TechVentures</span>
+      <span>MedicCenter</span>
+      <span>EduMaster</span>
+      <span>ImovelPrime</span>
+      <span>FitClub</span>
+      <span>JuridixLaw</span>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- HOW IT WORKS -->
-  <section class="how" id="how">
-    <div class="how-inner">
-      <p class="section-label">Como funciona</p>
-      <h2 class="section-title">Agendar é simples assim</h2>
-      <p class="section-sub" style="margin:0 auto 0;">Sem espera, sem surpresa. Você escolhe o horário perfeito.</p>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <h3>Escolha o serviço</h3>
-          <p>Cabelo, unhas, estética — navegue pela nossa lista de serviços.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <h3>Escolha o horário</h3>
-          <p>Veja os horários disponíveis e selecione o que melhor encaixa na sua rotina.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <h3>Confirme pelo WhatsApp</h3>
-          <p>Envie uma mensagem rápida e receba a confirmação em segundos.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <h3>Aproveite!</h3>
-          <p>Chegue, relaxe e saia renovada. A gente cuida do resto.</p>
-        </div>
-      </div>
+<!-- ═══════════════════════════ SERVIÇOS ═══════════════════════ -->
+<section class="section servicos" id="servicos">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">O que entregamos</span>
+      <h2>Soluções digitais completas</h2>
+      <p>Desde a criação da página até a integração com seus sistemas — tudo em um único lugar.</p>
     </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="pricing" id="pricing">
-    <p class="section-label">Tabela de preços</p>
-    <h2 class="section-title">Transparência do início ao fim</h2>
-    <p class="section-sub">Preços fixos, sem surpresas. Consulte pacotes especiais com desconto.</p>
-    <div class="pricing-grid">
-      <div class="plan">
-        <div class="plan-name">Cabelo</div>
-        <div class="plan-price"><sup>R$</sup>80<sub>+</sub></div>
-        <p class="plan-desc">Corte, escova e finalização.</p>
-        <ul class="plan-features">
-          <li>Corte feminino ou masculino</li>
-          <li>Escova modeladora</li>
-          <li>Hidratação express</li>
-          <li>Consultoria de estilo</li>
+    <div class="cards-grid">
+      <div class="card-item">
+        <div class="card-icon" style="--c:#6C63FF">
+          <i class="bi bi-layout-text-window"></i>
+        </div>
+        <h3>Landing Page</h3>
+        <p>Página de vendas otimizada para conversão, com design profissional, copy persuasivo e carregamento ultra-rápido.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> Responsivo (mobile first)</li>
+          <li><i class="bi bi-check2"></i> SEO On-Page</li>
+          <li><i class="bi bi-check2"></i> Pixel de rastreamento</li>
         </ul>
-        <a href="https://wa.me/5511999999999" class="btn btn-outline" style="width:100%;text-align:center;display:block;">Agendar</a>
       </div>
-      <div class="plan featured">
-        <div class="plan-badge">Mais procurado</div>
-        <div class="plan-name">Pacote Completo</div>
-        <div class="plan-price"><sup>R$</sup>220<sub></sub></div>
-        <p class="plan-desc">Cabelo + Unhas + Sobrancelha.</p>
-        <ul class="plan-features">
-          <li>Corte e escova</li>
-          <li>Manicure e pedicure</li>
-          <li>Design de sobrancelha</li>
-          <li>Máscara de hidratação</li>
-          <li>Café e snacks inclusos</li>
+      <div class="card-item">
+        <div class="card-icon" style="--c:#FF6B6B">
+          <i class="bi bi-fire"></i>
+        </div>
+        <h3>Hotsite de Evento</h3>
+        <p>Página de campanha ou lançamento com contagem regressiva, inscrições e notificações automáticas.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> Countdown dinâmico</li>
+          <li><i class="bi bi-check2"></i> Lista de espera</li>
+          <li><i class="bi bi-check2"></i> E-mail automático</li>
         </ul>
-        <a href="https://wa.me/5511999999999" class="btn btn-primary" style="width:100%;text-align:center;display:block;">Agendar agora</a>
       </div>
-      <div class="plan">
-        <div class="plan-name">Noiva</div>
-        <div class="plan-price" style="font-size:2rem;">Sob consulta</div>
-        <p class="plan-desc">Produção completa para o grande dia.</p>
-        <ul class="plan-features">
-          <li>Penteado ou escova</li>
-          <li>Maquiagem profissional</li>
-          <li>Unhas em gel</li>
-          <li>Design de sobrancelha</li>
-          <li>Teste grátis incluído</li>
+      <div class="card-item">
+        <div class="card-icon" style="--c:#00BFA6">
+          <i class="bi bi-plug-fill"></i>
+        </div>
+        <h3>Integração com APIs</h3>
+        <p>Conectamos sua página a CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart e muito mais.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> Webhook personalizado</li>
+          <li><i class="bi bi-check2"></i> RD Station / HubSpot</li>
+          <li><i class="bi bi-check2"></i> Pagamento online</li>
         </ul>
-        <a href="https://wa.me/5511999999999" class="btn btn-outline" style="width:100%;text-align:center;display:block;">Falar conosco</a>
+      </div>
+      <div class="card-item">
+        <div class="card-icon" style="--c:#F7B731">
+          <i class="bi bi-envelope-paper-fill"></i>
+        </div>
+        <h3>Envio de Proposta</h3>
+        <p>Formulário inteligente que captura lead e envia proposta formatada por e-mail automaticamente — em segundos.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> E-mail transacional</li>
+          <li><i class="bi bi-check2"></i> Notificação imediata</li>
+          <li><i class="bi bi-check2"></i> Anti-spam integrado</li>
+        </ul>
+      </div>
+      <div class="card-item">
+        <div class="card-icon" style="--c:#A855F7">
+          <i class="bi bi-graph-up"></i>
+        </div>
+        <h3>Analytics & Rastreamento</h3>
+        <p>Instalação de GA4, Meta Pixel, GTM e heatmaps para você saber exatamente de onde vêm seus leads.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> Google Analytics 4</li>
+          <li><i class="bi bi-check2"></i> Meta Pixel + CAPI</li>
+          <li><i class="bi bi-check2"></i> Heatmap / Hotjar</li>
+        </ul>
+      </div>
+      <div class="card-item">
+        <div class="card-icon" style="--c:#3B82F6">
+          <i class="bi bi-rocket-takeoff"></i>
+        </div>
+        <h3>Hospedagem & Deploy</h3>
+        <p>Publicamos sua página em domínio próprio com HTTPS, CDN global e uptime de 99,9%.</p>
+        <ul class="card-list">
+          <li><i class="bi bi-check2"></i> SSL gratuito</li>
+          <li><i class="bi bi-check2"></i> CDN global</li>
+          <li><i class="bi bi-check2"></i> Deploy em minutos</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
-      <p class="section-label">Depoimentos</p>
-      <h2 class="section-title">Clientes que amam o resultado</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Fiz o pacote completo e saí me sentindo uma rainha! Equipe super atenciosa e resultado incrível. Já virei cliente fiel."</blockquote>
-          <cite>Mariana Souza — cliente há 2 anos</cite>
+<!-- ═══════════════════════ COMO FUNCIONA ═════════════════════ -->
+<section class="section como-funciona" id="como-funciona">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-label">Processo</span>
+      <h2>Como funciona</h2>
+      <p>Do briefing ao ar em 5 passos simples.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Solicite sua proposta</h3>
+          <p>Preencha o formulário abaixo. Em até 2 horas você recebe a proposta com valores e cronograma.</p>
         </div>
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Finalmente encontrei um salão que entende o meu cabelo. A coloração ficou perfeita e durou muito mais do que eu esperava."</blockquote>
-          <cite>Laís Ferreira — cliente há 1 ano</cite>
+      </div>
+      <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Briefing & Aprovação</h3>
+          <p>Nossa equipe entra em contato, entende seu negócio e envia o briefing completo para aprovação.</p>
         </div>
-        <div class="testimonial">
-          <div class="stars">★★★★★</div>
-          <blockquote>"Fiz a maquiagem de noiva aqui e cada detalhe foi pensado para mim. Me senti absolutamente radiante no meu grande dia!"</blockquote>
-          <cite>Camila Rocha — noiva 2025</cite>
+      </div>
+      <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Desenvolvimento</h3>
+          <p>Criamos design + código + integrações. Você acompanha o progresso em tempo real.</p>
+        </div>
+      </div>
+      <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Revisão & Ajustes</h3>
+          <p>Rodada de revisões ilimitadas. Você aprova cada detalhe antes do lançamento.</p>
+        </div>
+      </div>
+      <div class="step-arrow"><i class="bi bi-arrow-right"></i></div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h3>Publicação & Suporte</h3>
+          <p>Sua página vai ao ar. Suporte técnico incluso por 30 dias após a entrega.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="cta-inner">
-      <h2>Pronta para se sentir incrível?</h2>
-      <p>Agende agora pelo WhatsApp e garanta seu horário preferido.</p>
-      <a href="https://wa.me/5511999999999" class="btn btn-white">💬 Agendar pelo WhatsApp</a>
+
+<!-- ══════════════════════ FORMULÁRIO ══════════════════════════ -->
+<section class="section proposta" id="proposta">
+  <div class="container">
+    <div class="proposta-wrapper">
+      <div class="proposta-text">
+        <span class="section-label">Vamos começar</span>
+        <h2>Solicite sua proposta<br /><em>gratuitamente</em></h2>
+        <p>Preencha o formulário e receba em até 2 horas uma proposta personalizada com valores, prazo e escopo completo.</p>
+        <ul class="proposta-trust">
+          <li><i class="bi bi-shield-check"></i> Seus dados estão seguros</li>
+          <li><i class="bi bi-clock"></i> Resposta em até 2 horas</li>
+          <li><i class="bi bi-cash-coin"></i> Proposta sem compromisso</li>
+          <li><i class="bi bi-headset"></i> Atendimento humanizado</li>
+        </ul>
+      </div>
+
+      <form class="proposta-form" id="propostaForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            <span class="field-error" id="nome-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            <span class="field-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="plano">Plano de interesse *</label>
+          <select id="plano" name="plano" required>
+            <option value="">Selecione um plano</option>
+            <option value="Starter">Starter — Landing Page (a partir de R$ 497)</option>
+            <option value="Pro">Pro — Hotsite + Integrações (a partir de R$ 997)</option>
+            <option value="Enterprise">Enterprise — Projeto customizado</option>
+            <option value="Não sei ainda">Ainda não sei — quero indicação</option>
+          </select>
+          <span class="field-error" id="plano-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Conte brevemente sobre seu projeto</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Ex: Quero uma landing page para meu curso online com integração de pagamento..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+          <span id="btnText"><i class="bi bi-send-fill"></i> Enviar proposta</span>
+          <span id="btnLoading" style="display:none;"><i class="bi bi-arrow-repeat spin"></i> Enviando...</span>
+        </button>
+
+        <div id="formFeedback" class="form-feedback" style="display:none;"></div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <a href="#" class="logo">Bella Studio</a>
-    <p>© 2026 Bella Studio. Todos os direitos reservados.</p>
-    <nav class="footer-links">
-      <a href="#">Instagram</a>
-      <a href="#">Localização</a>
-      <a href="#">Contato</a>
-    </nav>
-  </footer>
+<!-- ════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">⚡ HotSite<strong>Pro</strong></a>
+      <p>Transformando ideias em páginas que vendem.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#proposta">Contato</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 HotSitePro. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
