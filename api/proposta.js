@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
 
   try {
     await resend.emails.send({
-      from: 'onboarding@resend.dev',
+      from: process.env.FROM_EMAIL || 'noreply@plivaro.com.br',
       to: process.env.EMAIL_TO,
       replyTo: dados.email,
       subject: `Nova proposta - ${dados.nome} — ${dados.plano}`,
