@@ -1,7 +1,7 @@
 require('dotenv').config();
 const { Resend } = require('resend');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const destinatarioEmail = process.env.EMAIL_TO || process.env.PLIVARO_EMAIL_TO;
 
 // ── Sanitização ───────────────────────────────────────────────
 function sanitize(value) {
@@ -45,10 +45,16 @@ module.exports = async (req, res) => {
     mensagem: sanitize(mensagem)
   };
 
+  if (!process.env.RESEND_API_KEY) {
+    return res.status(500).json({ error: 'RESEND_API_KEY não configurada' });
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     await resend.emails.send({
       from: process.env.FROM_EMAIL || 'noreply@plivaro.com.br',
-      to: process.env.EMAIL_TO,
+      to: destinatarioEmail,
       replyTo: dados.email,
       subject: `Nova proposta - ${dados.nome} — ${dados.plano}`,
       html: `
