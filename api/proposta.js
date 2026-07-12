@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Resend } = require('resend');
 
 const destinatarioEmail = process.env.EMAIL_TO || process.env.PLIVARO_EMAIL_TO;
+const copiaEmail = process.env.EMAIL_CC;
 
 // ── Sanitização ───────────────────────────────────────────────
 function sanitize(value) {
@@ -55,6 +56,7 @@ module.exports = async (req, res) => {
     await resend.emails.send({
       from: process.env.FROM_EMAIL || 'noreply@plivaro.com.br',
       to: destinatarioEmail,
+      ...(copiaEmail ? { cc: copiaEmail } : {}),
       replyTo: dados.email,
       subject: `Nova proposta - ${dados.nome} — ${dados.plano}`,
       html: `
