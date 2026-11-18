@@ -26,8 +26,8 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
       />
 
       {!compact && (
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-12 pt-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1.3fr]">
-          <div className="sm:col-span-2 lg:col-span-1">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-10 px-4 pb-12 pt-14 sm:px-6 sm:pt-16 md:grid-cols-3 lg:grid-cols-[2fr_1fr_1fr_1.3fr] lg:gap-10">
+          <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/55">
               Transformando ideias em páginas que vendem. Landing pages e
@@ -38,7 +38,7 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
           <FooterCol title="Navegação">
             {navegacao.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="footer-link">
+                <Link href={l.href} className="footer-link py-1">
                   {l.label}
                 </Link>
               </li>
@@ -48,28 +48,28 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
           <FooterCol title="Serviços">
             {servicos.map((s) => (
               <li key={s}>
-                <Link href="/#servicos" className="footer-link">
+                <Link href="/#servicos" className="footer-link py-1">
                   {s}
                 </Link>
               </li>
             ))}
           </FooterCol>
 
-          <FooterCol title="Contato">
-            <li className="flex items-center gap-3">
+          <FooterCol title="Contato" className="col-span-2 md:col-span-1">
+            <li className="flex items-center gap-3 py-1">
               <Mail className="size-4 shrink-0 text-brand" aria-hidden />
               <a
                 href={`mailto:${site.contactEmail}`}
-                className="break-all text-white/75 transition-colors hover:text-white"
+                className="text-white/75 transition-colors wrap-anywhere hover:text-white"
               >
                 {site.contactEmail}
               </a>
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 py-1">
               <MapPin className="size-4 shrink-0 text-brand" aria-hidden />
               {site.location}
             </li>
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-3 py-1">
               <Clock className="size-4 shrink-0 text-brand" aria-hidden />
               {site.hours}
             </li>
@@ -83,10 +83,10 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
             © 2026 <strong className="text-white/75">Plivaro</strong>. Todos os
             direitos reservados.
           </p>
-          <div className="flex items-center gap-2.5">
+          <div className="flex flex-wrap items-center justify-center gap-x-2.5">
             <Link
               href="/politica-privacidade-cookies#privacidade"
-              className="transition-colors hover:text-white"
+              className="py-1 transition-colors hover:text-white"
             >
               Política de Privacidade
             </Link>
@@ -95,7 +95,7 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
             </span>
             <Link
               href="/politica-privacidade-cookies#cookies"
-              className="transition-colors hover:text-white"
+              className="py-1 transition-colors hover:text-white"
             >
               Política de Cookies
             </Link>
@@ -108,15 +108,17 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
 
 function FooterCol({
   title,
+  className = "",
   children,
 }: Readonly<{
   title: string;
+  className?: string;
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <h2 className="mb-4 font-bold text-white">{title}</h2>
-      <ul className="flex flex-col gap-3 text-sm">{children}</ul>
+    <div className={className}>
+      <h2 className="mb-3 font-bold text-white">{title}</h2>
+      <ul className="flex flex-col gap-1.5 text-sm">{children}</ul>
     </div>
   );
 }
