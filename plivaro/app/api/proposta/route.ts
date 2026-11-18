@@ -82,7 +82,7 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: process.env.FROM_EMAIL || "Plivaro <noreply@plivaro.com.br>",
+      from: process.env.FROM_EMAIL || "Plivaro <noreply@plivaro.com>",
       to: destinatario,
       ...(copia ? { cc: copia } : {}),
       replyTo: dados.email,

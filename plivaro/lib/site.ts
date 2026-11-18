@@ -18,8 +18,8 @@ export const site = {
   title: "Plivaro | Landing Pages e Sites Profissionais",
   description:
     "Criamos landing pages e hotsites de alta conversão com integração de APIs e automações. Solicite sua proposta grátis.",
-  contactEmail: "daniel@plivaro.com.br",
-  privacyEmail: "abidala@plivaro.com.br",
+  contactEmail: "daniel@plivaro.com",
+  privacyEmail: "abidala@plivaro.com",
   location: "São Paulo, SP — Brasil",
   hours: "Seg–Sex · 9h às 18h",
   gaId: "G-4LMB7WFWT4",
