@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -7,23 +8,25 @@ import { Services } from "@/components/Services";
 import { Testimonial } from "@/components/Testimonial";
 import { SITE_URL, site } from "@/lib/site";
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.name,
-  url: SITE_URL,
-  description: site.description,
-  email: site.contactEmail,
-  areaServed: "BR",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "São Paulo",
-    addressRegion: "SP",
-    addressCountry: "BR",
-  },
-};
+export default async function Home() {
+  const t = await getTranslations("Metadata");
 
-export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: site.name,
+    url: SITE_URL,
+    description: t("description"),
+    email: site.contactEmail,
+    areaServed: "BR",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "São Paulo",
+      addressRegion: "SP",
+      addressCountry: "BR",
+    },
+  };
+
   return (
     <>
       <Header />

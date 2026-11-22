@@ -1,23 +1,23 @@
-import Link from "next/link";
 import { Clock, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { site } from "@/lib/site";
 
 const navegacao = [
-  { href: "/#servicos", label: "Serviços" },
-  { href: "/#como-funciona", label: "Como funciona" },
-  { href: "/#depoimentos", label: "Depoimentos" },
-  { href: "/#proposta", label: "Fale conosco" },
-];
+  { href: "/#servicos", key: "servicos" },
+  { href: "/#como-funciona", key: "comoFunciona" },
+  { href: "/#depoimentos", key: "depoimentos" },
+  { href: "/#proposta", key: "faleConosco" },
+] as const;
 
-const servicos = [
-  "Landing Page",
-  "Hotsite de Evento",
-  "Integração com APIs",
-  "Hospedagem & Deploy",
-];
+const servicos = ["landingPage", "hotsite", "apis", "hospedagem"] as const;
 
 export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
+  const t = useTranslations("Footer");
+  const tNav = useTranslations("Nav");
+  const tSite = useTranslations("Site");
+
   return (
     <footer className="relative overflow-hidden bg-ink text-white/70">
       <div
@@ -30,32 +30,31 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Logo />
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/55">
-              Transformando ideias em páginas que vendem. Landing pages e
-              hotsites de alta conversão com integração de APIs e automações.
+              {t("about")}
             </p>
           </div>
 
-          <FooterCol title="Navegação">
+          <FooterCol title={t("navTitle")}>
             {navegacao.map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="footer-link py-1">
-                  {l.label}
+                  {tNav(l.key)}
                 </Link>
               </li>
             ))}
           </FooterCol>
 
-          <FooterCol title="Serviços">
+          <FooterCol title={t("servicesTitle")}>
             {servicos.map((s) => (
               <li key={s}>
                 <Link href="/#servicos" className="footer-link py-1">
-                  {s}
+                  {t(`servicos.${s}`)}
                 </Link>
               </li>
             ))}
           </FooterCol>
 
-          <FooterCol title="Contato" className="col-span-2 md:col-span-1">
+          <FooterCol title={t("contactTitle")} className="col-span-2 md:col-span-1">
             <li className="flex items-center gap-3 py-1">
               <Mail className="size-4 shrink-0 text-brand" aria-hidden />
               <a
@@ -67,11 +66,11 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
             </li>
             <li className="flex items-center gap-3 py-1">
               <MapPin className="size-4 shrink-0 text-brand" aria-hidden />
-              {site.location}
+              {tSite("location")}
             </li>
             <li className="flex items-center gap-3 py-1">
               <Clock className="size-4 shrink-0 text-brand" aria-hidden />
-              {site.hours}
+              {tSite("hours")}
             </li>
           </FooterCol>
         </div>
@@ -80,15 +79,16 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 text-center text-[0.82rem] text-white/50 sm:flex-row sm:px-6 sm:text-left">
           <p>
-            © 2026 <strong className="text-white/75">Plivaro</strong>. Todos os
-            direitos reservados.
+            {t.rich("copyright", {
+              strong: (chunks) => <strong className="text-white/75">{chunks}</strong>,
+            })}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-2.5">
             <Link
               href="/politica-privacidade-cookies#privacidade"
               className="py-1 transition-colors hover:text-white"
             >
-              Política de Privacidade
+              {t("privacy")}
             </Link>
             <span aria-hidden className="text-white/25">
               ·
@@ -97,7 +97,7 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
               href="/politica-privacidade-cookies#cookies"
               className="py-1 transition-colors hover:text-white"
             >
-              Política de Cookies
+              {t("cookies")}
             </Link>
           </div>
         </div>

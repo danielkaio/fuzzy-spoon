@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "./SectionHeader";
 import { steps } from "@/lib/site";
 
 export function Process() {
+  const t = useTranslations("Process");
+
   return (
     <section
       id="como-funciona"
@@ -13,9 +16,9 @@ export function Process() {
         <SectionHeader
           id="processo-titulo"
           tone="dark"
-          label="Processo"
-          title="Como funciona"
-          description="Do briefing ao ar em 5 passos simples."
+          label={t("label")}
+          title={t("title")}
+          description={t("description")}
         />
 
         <ol className="relative grid gap-10 lg:grid-cols-5 lg:gap-6">
@@ -26,15 +29,17 @@ export function Process() {
           />
           {steps.map((step, i) => (
             <li
-              key={step.title}
+              key={step}
               className="reveal relative flex gap-5 lg:flex-col lg:items-center lg:text-center"
             >
               <span className="relative z-10 grid size-13 shrink-0 place-items-center rounded-full bg-brand text-lg font-extrabold text-white ring-8 ring-ink">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div className="pt-2 lg:pt-0">
-                <h3 className="font-bold text-white">{step.title}</h3>
-                <p className="mt-2 text-sm text-white/55">{step.description}</p>
+                <h3 className="font-bold text-white">{t(`steps.${step}.title`)}</h3>
+                <p className="mt-2 text-sm text-white/55">
+                  {t(`steps.${step}.description`)}
+                </p>
               </div>
             </li>
           ))}
@@ -45,7 +50,7 @@ export function Process() {
             href="#proposta"
             className="inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 font-semibold text-ink transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand/30"
           >
-            Começar pelo passo 1
+            {t("cta")}
           </a>
         </div>
       </div>

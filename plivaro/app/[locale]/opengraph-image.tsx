@@ -1,10 +1,21 @@
 import { ImageResponse } from "next/og";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 export const alt = "Plivaro — Landing pages que convertem visitantes em clientes reais";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: param } = await params;
+  const locale = hasLocale(routing.locales, param) ? param : routing.defaultLocale;
+  const t = await getTranslations({ locale, namespace: "OpenGraph" });
+
   return new ImageResponse(
     (
       <div
@@ -39,12 +50,12 @@ export default function Image() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div style={{ fontSize: 72, fontWeight: 800, lineHeight: 1.1, display: "flex", flexWrap: "wrap" }}>
-            Landing pages que&nbsp;
-            <span style={{ color: "#a78bfa" }}>convertem visitantes</span>
-            &nbsp;em clientes reais.
+            {t("tituloInicio")}&nbsp;
+            <span style={{ color: "#a78bfa" }}>{t("tituloDestaque")}</span>
+            &nbsp;{t("tituloFim")}
           </div>
           <div style={{ fontSize: 30, color: "rgba(255,255,255,0.65)" }}>
-            Hotsites, integrações e automações · prontos em até 5 dias úteis
+            {t("subtitulo")}
           </div>
         </div>
       </div>

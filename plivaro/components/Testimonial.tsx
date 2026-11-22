@@ -1,8 +1,11 @@
 import { Quote, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeader } from "./SectionHeader";
 import { testimonial } from "@/lib/site";
 
 export function Testimonial() {
+  const t = useTranslations("Testimonial");
+
   return (
     <section
       id="depoimentos"
@@ -12,9 +15,9 @@ export function Testimonial() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeader
           id="depoimentos-titulo"
-          label="Feedback de clientes"
-          title="O que dizem nossos clientes"
-          description="A confiança de quem já trabalhou conosco é o nosso maior case."
+          label={t("label")}
+          title={t("title")}
+          description={t("description")}
         />
 
         <figure className="reveal relative mx-auto mt-20 max-w-3xl rounded-3xl border border-line bg-white px-6 pb-10 pt-14 text-center shadow-[0_12px_40px_rgba(108,99,255,0.12)] sm:px-12">
@@ -25,7 +28,7 @@ export function Testimonial() {
           <div
             className="mb-6 inline-flex gap-1 text-gold"
             role="img"
-            aria-label="Avaliação 5 de 5 estrelas"
+            aria-label={t("rating")}
           >
             {Array.from({ length: 5 }, (_, i) => (
               <Star key={i} className="size-5 fill-current" aria-hidden />
@@ -33,7 +36,7 @@ export function Testimonial() {
           </div>
 
           <blockquote className="space-y-4 text-lg leading-8 text-fg">
-            {testimonial.paragraphs.map((p) => (
+            {(t.raw("paragraphs") as string[]).map((p) => (
               <p key={p}>{p}</p>
             ))}
           </blockquote>
@@ -44,9 +47,7 @@ export function Testimonial() {
             </span>
             <span>
               <strong className="block text-fg">{testimonial.author}</strong>
-              <span className="block text-sm text-muted">
-                {testimonial.role}
-              </span>
+              <span className="block text-sm text-muted">{t("role")}</span>
             </span>
           </figcaption>
         </figure>

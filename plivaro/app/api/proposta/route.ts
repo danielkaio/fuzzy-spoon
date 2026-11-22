@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-import { validarProposta, type Proposta } from "@/lib/proposta";
+import { validarProposta, type CodigoResposta, type Proposta } from "@/lib/proposta";
 
 /**
  * Variáveis de ambiente (mesmas do site anterior):
@@ -7,6 +7,9 @@ import { validarProposta, type Proposta } from "@/lib/proposta";
  *   EMAIL_TO         destinatário (ou PLIVARO_EMAIL_TO)
  *   EMAIL_CC         cópia (opcional)
  *   FROM_EMAIL       remetente verificado no Resend
+ *
+ * As respostas trazem um `code` (ver CODIGOS_RESPOSTA em lib/proposta.ts);
+ * o formulário traduz o código no idioma do visitante.
  */
 
 // Limite simples por IP. Em ambiente serverless vale por instância,
@@ -24,6 +27,10 @@ function excedeuLimite(ip: string): boolean {
   return recentes.length > MAX_ENVIOS;
 }
 
+function responder(code: CodigoResposta, status = 200, extra: object = {}) {
+  return Response.json({ success: status < 400, code, ...extra }, { status });
+}
+
 function escaparHtml(valor: string): string {
   return valor
     .replaceAll("&", "&amp;")
@@ -39,12 +46,12 @@ export async function POST(request: Request) {
     corpo = await request.json();
     if (!corpo || typeof corpo !== "object") throw new Error();
   } catch {
-    return Response.json({ error: "Requisição inválida." }, { status: 400 });
+    return responder("requisicaoInvalida", 400);
   }
 
   // Robôs costumam preencher o campo isca; fingimos sucesso para não dar pistas.
   if (typeof corpo.website === "string" && corpo.website.trim() !== "") {
-    return Response.json({ success: true, message: "Proposta enviada com sucesso!" });
+    return responder("sucesso");
   }
 
   const ip =
@@ -52,32 +59,25 @@ export async function POST(request: Request) {
     request.headers.get("x-real-ip") ||
     "desconhecido";
   if (excedeuLimite(ip)) {
-    return Response.json(
-      { error: "Muitas tentativas. Aguarde alguns minutos e tente novamente." },
-      { status: 429 },
-    );
+    return responder("limiteExcedido", 429);
   }
 
   const resultado = validarProposta(corpo);
   if (!resultado.ok) {
-    return Response.json(
-      { error: "Revise os campos destacados.", fields: resultado.erros },
-      { status: 400 },
-    );
+    return responder("camposInvalidos", 400, { fields: resultado.erros });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
   const destinatario = process.env.EMAIL_TO || process.env.PLIVARO_EMAIL_TO;
   if (!apiKey || !destinatario) {
     console.error("[proposta] RESEND_API_KEY ou EMAIL_TO não configurados.");
-    return Response.json(
-      { error: "Envio indisponível no momento. Escreva para nós por e-mail." },
-      { status: 500 },
-    );
+    return responder("envioIndisponivel", 500);
   }
 
   const dados = resultado.dados;
   const copia = process.env.EMAIL_CC;
+  // Idioma em que o visitante viu o site, para responder na mesma língua.
+  const idioma = corpo.idioma === "en" ? "Inglês" : "Português";
 
   try {
     const resend = new Resend(apiKey);
@@ -87,21 +87,15 @@ export async function POST(request: Request) {
       ...(copia ? { cc: copia } : {}),
       replyTo: dados.email,
       subject: `Nova proposta - ${dados.nome} — ${dados.plano}`.replace(/[\r\n]+/g, " "),
-      html: montarEmail(dados),
-      text: montarTexto(dados),
+      html: montarEmail(dados, idioma),
+      text: montarTexto(dados, idioma),
     });
     if (error) throw new Error(error.message);
 
-    return Response.json({
-      success: true,
-      message: "Proposta enviada com sucesso! Retornaremos em até 2 horas úteis.",
-    });
+    return responder("sucesso");
   } catch (err) {
     console.error("[proposta] Falha no envio:", err instanceof Error ? err.message : err);
-    return Response.json(
-      { error: "Não foi possível enviar agora. Tente novamente em instantes." },
-      { status: 502 },
-    );
+    return responder("falhaEnvio", 502);
   }
 }
 
@@ -114,11 +108,14 @@ const ROTULOS: [keyof Proposta, string][] = [
   ["mensagem", "Mensagem"],
 ];
 
-function montarTexto(dados: Proposta): string {
-  return ROTULOS.map(([campo, rotulo]) => `${rotulo}: ${dados[campo] || "—"}`).join("\n");
+function montarTexto(dados: Proposta, idioma: string): string {
+  return [
+    ...ROTULOS.map(([campo, rotulo]) => `${rotulo}: ${dados[campo] || "—"}`),
+    `Idioma do site: ${idioma}`,
+  ].join("\n");
 }
 
-function montarEmail(dados: Proposta): string {
+function montarEmail(dados: Proposta, idioma: string): string {
   const recebido = new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
   const linhas = ROTULOS.map(([campo, rotulo], i) => {
     const bruto = dados[campo];
@@ -131,7 +128,8 @@ function montarEmail(dados: Proposta): string {
     }
     const borda = i > 0 ? "border-top:1px solid #f0f0f0;" : "";
     return `<tr style="${borda}"><td style="padding:10px 0;color:#888;font-weight:600;width:120px;vertical-align:top;">${rotulo}</td><td style="padding:10px 0;">${valor}</td></tr>`;
-  }).join("");
+  }).join("") +
+    `<tr style="border-top:1px solid #f0f0f0;"><td style="padding:10px 0;color:#888;font-weight:600;width:120px;vertical-align:top;">Idioma do site</td><td style="padding:10px 0;">${idioma}</td></tr>`;
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">

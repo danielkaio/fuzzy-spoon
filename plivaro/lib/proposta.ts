@@ -1,13 +1,17 @@
 /**
  * Regras do formulário de proposta, compartilhadas entre o navegador
  * (validação imediata) e a rota /api/proposta (validação definitiva).
+ *
+ * Os erros são códigos, não frases: cada idioma traduz em
+ * messages › Form.erros.
  */
 
+/** `value` é o que chega no e-mail; o texto exibido vem de messages › Form.planos. */
 export const PLANOS = [
-  { value: "Starter", label: "Starter — Landing Page (a partir de R$ 497)" },
-  { value: "Pro", label: "Pro — Hotsite + Integrações (a partir de R$ 997)" },
-  { value: "Enterprise", label: "Enterprise — Projeto customizado" },
-  { value: "Não sei ainda", label: "Ainda não sei — quero indicação" },
+  { value: "Starter", key: "starter" },
+  { value: "Pro", key: "pro" },
+  { value: "Enterprise", key: "enterprise" },
+  { value: "Não sei ainda", key: "naoSei" },
 ] as const;
 
 export type Plano = (typeof PLANOS)[number]["value"];
@@ -22,7 +26,19 @@ export type Proposta = {
 };
 
 export type CampoProposta = keyof Proposta;
-export type ErrosProposta = Partial<Record<CampoProposta, string>>;
+export type CodigoErro = "nomeCurto" | "emailInvalido" | "planoInvalido";
+export type ErrosProposta = Partial<Record<CampoProposta, CodigoErro>>;
+
+/** Respostas da rota /api/proposta, traduzidas em messages › Form.status. */
+export const CODIGOS_RESPOSTA = [
+  "sucesso",
+  "requisicaoInvalida",
+  "limiteExcedido",
+  "camposInvalidos",
+  "envioIndisponivel",
+  "falhaEnvio",
+] as const;
+export type CodigoResposta = (typeof CODIGOS_RESPOSTA)[number];
 
 const LIMITES: Record<CampoProposta, number> = {
   nome: 120,
@@ -53,9 +69,9 @@ export function validarProposta(
   const mensagem = texto(entrada.mensagem, "mensagem");
 
   const erros: ErrosProposta = {};
-  if (nome.length < 2) erros.nome = "Informe seu nome.";
-  if (!EMAIL_REGEX.test(email)) erros.email = "Informe um e-mail válido.";
-  if (!PLANOS.some((p) => p.value === plano)) erros.plano = "Selecione um plano.";
+  if (nome.length < 2) erros.nome = "nomeCurto";
+  if (!EMAIL_REGEX.test(email)) erros.email = "emailInvalido";
+  if (!PLANOS.some((p) => p.value === plano)) erros.plano = "planoInvalido";
 
   if (Object.keys(erros).length > 0) return { ok: false, erros };
 

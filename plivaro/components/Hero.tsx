@@ -6,16 +6,19 @@ import {
   TrendingUp,
   Zap,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const garantias = ["Sem contrato longo", "Entrega em 5 dias", "Suporte incluso"];
+const garantias = ["contrato", "entrega", "suporte"] as const;
 
 const stats = [
-  { valor: "98%", label: "Aprovação" },
-  { valor: "5d", label: "Entrega" },
-  { valor: "24/7", label: "Suporte" },
-];
+  { valor: "98%", key: "aprovacao" },
+  { valor: "5d", key: "entrega" },
+  { valor: "24/7", key: "suporte" },
+] as const;
 
 export function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section
       aria-labelledby="hero-titulo"
@@ -27,22 +30,21 @@ export function Hero() {
         <div className="text-center lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/15 px-3.5 py-1.5 text-sm font-semibold text-brand-light">
             <Zap className="size-4 fill-current" aria-hidden />
-            Pronto em até 5 dias úteis
+            {t("badge")}
           </span>
 
           <h1
             id="hero-titulo"
             className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]"
           >
-            Landing pages que <br className="hidden sm:block" />
-            <span className="text-gradient">convertem visitantes</span>
-            <br className="hidden sm:block" /> em clientes reais.
+            {t.rich("title", {
+              br: () => <br className="hidden sm:block" />,
+              destaque: (chunks) => <span className="text-gradient">{chunks}</span>,
+            })}
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/65 lg:mx-0">
-            Desenvolvemos hotsites e landing pages de alta performance com
-            integração de APIs, automações e envio de propostas — prontos em
-            até 5 dias úteis.
+            {t("subtitle")}
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-3.5 sm:flex-row lg:justify-start">
@@ -51,13 +53,13 @@ export function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-xl hover:shadow-brand/40"
             >
               <Send className="size-4" aria-hidden />
-              Solicitar proposta grátis
+              {t("ctaPrimary")}
             </a>
             <a
               href="#como-funciona"
               className="group inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/10 px-7 py-3.5 font-semibold text-white backdrop-blur transition hover:bg-white/20"
             >
-              Ver como funciona
+              {t("ctaSecondary")}
               <ArrowRight
                 className="size-4 transition-transform group-hover:translate-x-1"
                 aria-hidden
@@ -69,7 +71,7 @@ export function Hero() {
             {garantias.map((g) => (
               <li key={g} className="flex items-center gap-1.5">
                 <CircleCheck className="size-4 text-teal" aria-hidden />
-                {g}
+                {t(`garantias.${g}`)}
               </li>
             ))}
           </ul>
@@ -83,13 +85,13 @@ export function Hero() {
               <span className="size-2.5 rounded-full bg-[#febc2e]" />
               <span className="size-2.5 rounded-full bg-[#28c840]" />
               <span className="ml-2.5 rounded bg-white/10 px-2.5 py-0.5 text-[0.7rem] text-white/50">
-                plivaro/minha-empresa
+                {t("mockup.url")}
               </span>
             </div>
             <div className="p-5">
               <div className="mb-4 rounded-xl bg-linear-to-br from-brand to-[#3b37ce] p-5">
                 <span className="inline-block rounded-full bg-white/15 px-2 py-0.5 text-xs text-white">
-                  ✅ Proposta aprovada!
+                  {t("mockup.aprovada")}
                 </span>
                 <div className="mt-3 h-3.5 w-[70%] rounded-md bg-white/70" />
                 <div className="mt-2 h-2.5 w-[90%] rounded-md bg-white/40" />
@@ -99,13 +101,15 @@ export function Hero() {
               <div className="flex gap-3">
                 {stats.map((s) => (
                   <div
-                    key={s.label}
+                    key={s.key}
                     className="flex-1 rounded-lg bg-surface p-2.5 text-center"
                   >
                     <span className="block text-lg font-extrabold text-brand">
                       {s.valor}
                     </span>
-                    <span className="text-[0.7rem] text-muted">{s.label}</span>
+                    <span className="text-[0.7rem] text-muted">
+                      {t(`mockup.stats.${s.key}`)}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -114,11 +118,11 @@ export function Hero() {
 
           <div className="absolute -left-5 bottom-10 flex animate-float items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-sm font-semibold text-[#00897a] shadow-xl">
             <MailCheck className="size-4" />
-            E-mail enviado!
+            {t("mockup.emailEnviado")}
           </div>
           <div className="absolute -right-3 top-5 flex animate-float items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-sm font-semibold text-[#e04848] shadow-xl [animation-delay:1.5s]">
             <TrendingUp className="size-4" />
-            +320% conversão
+            {t("mockup.conversao")}
           </div>
         </div>
       </div>

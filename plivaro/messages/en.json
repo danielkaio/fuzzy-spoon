@@ -1,0 +1,298 @@
+{
+  "Metadata": {
+    "title": "Plivaro | Professional Landing Pages and Websites",
+    "description": "We build high-converting landing pages and microsites with API integrations and automation. Request your free proposal.",
+    "ogLocale": "en_US"
+  },
+  "Layout": {
+    "skipToContent": "Skip to content"
+  },
+  "Site": {
+    "location": "São Paulo, SP — Brazil",
+    "hours": "Mon–Fri · 9am to 6pm (BRT)"
+  },
+  "Logo": {
+    "ariaLabel": "Plivaro, home page"
+  },
+  "LocaleSwitcher": {
+    "label": "PT",
+    "ariaLabel": "Versão em português"
+  },
+  "Nav": {
+    "servicos": "Services",
+    "comoFunciona": "How it works",
+    "depoimentos": "Testimonials",
+    "especialista": "Talk to an expert",
+    "faleConosco": "Contact us"
+  },
+  "Header": {
+    "mainNav": "Main",
+    "mobileNav": "Menu",
+    "cta": "Request a proposal",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backToSite": "Back to site"
+  },
+  "Hero": {
+    "badge": "Ready in up to 5 business days",
+    "title": "Landing pages that <br></br><destaque>turn visitors</destaque><br></br> into real customers.",
+    "subtitle": "We build high-performance microsites and landing pages with API integrations, automation and proposal delivery — ready in up to 5 business days.",
+    "ctaPrimary": "Request a free proposal",
+    "ctaSecondary": "See how it works",
+    "garantias": {
+      "contrato": "No long-term contract",
+      "entrega": "Delivered in 5 days",
+      "suporte": "Support included"
+    },
+    "mockup": {
+      "url": "plivaro/my-company",
+      "aprovada": "✅ Proposal approved!",
+      "emailEnviado": "Email sent!",
+      "conversao": "+320% conversion",
+      "stats": {
+        "aprovacao": "Approval",
+        "entrega": "Delivery",
+        "suporte": "Support"
+      }
+    }
+  },
+  "Services": {
+    "label": "What we deliver",
+    "title": "Complete digital solutions",
+    "description": "From building the page to integrating it with your systems — all in one place.",
+    "items": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "A sales page optimized for conversion, with professional design, persuasive copy and lightning-fast loading.",
+        "lista": ["Responsive (mobile first)", "On-page SEO", "Tracking pixel"]
+      },
+      "hotsite": {
+        "title": "Microsite",
+        "description": "A campaign or launch page with a countdown, sign-ups and automatic notifications.",
+        "lista": ["Dynamic countdown", "Waiting list", "Automatic email"]
+      },
+      "apis": {
+        "title": "API Integration",
+        "description": "We connect your page to CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart and much more.",
+        "lista": ["Custom webhook", "RD Station / HubSpot", "Online payments"]
+      },
+      "proposta": {
+        "title": "Proposal Delivery",
+        "description": "A smart form that captures the lead and automatically emails a formatted proposal within seconds.",
+        "lista": ["Transactional email", "Instant notification", "Built-in anti-spam"]
+      },
+      "analytics": {
+        "title": "Analytics & Tracking",
+        "description": "Setup of GA4, Meta Pixel, GTM and heatmaps so you know exactly where your leads come from.",
+        "lista": ["Google Analytics 4", "Meta Pixel + CAPI", "Heatmap / Hotjar"]
+      },
+      "hospedagem": {
+        "title": "Hosting & Deployment",
+        "description": "We publish your page on your own domain with HTTPS, a global CDN and 99.9% uptime.",
+        "lista": ["Free SSL", "Global CDN", "Deploy in minutes"]
+      }
+    }
+  },
+  "Process": {
+    "label": "Process",
+    "title": "How it works",
+    "description": "From briefing to launch in 5 simple steps.",
+    "cta": "Start with step 1",
+    "steps": {
+      "solicite": {
+        "title": "Request your proposal",
+        "description": "Fill out the form below. Within 2 hours you get a proposal with pricing and a timeline."
+      },
+      "briefing": {
+        "title": "Briefing & approval",
+        "description": "Our team gets in touch, learns about your business and sends the full briefing for approval."
+      },
+      "desenvolvimento": {
+        "title": "Development",
+        "description": "We create the design, code and integrations. You follow the progress in real time."
+      },
+      "revisao": {
+        "title": "Review & tweaks",
+        "description": "Unlimited review rounds. You approve every detail before launch."
+      },
+      "publicacao": {
+        "title": "Launch & support",
+        "description": "Your page goes live. Technical support included for 30 days after delivery."
+      }
+    }
+  },
+  "Testimonial": {
+    "label": "Client feedback",
+    "title": "What our clients say",
+    "description": "The trust of those who have worked with us is our best case study.",
+    "rating": "Rated 5 out of 5 stars",
+    "paragraphs": [
+      "I hired Daniel Ajala to build a corporate website for one of my company’s products, Evolução Máxima.",
+      "I was very satisfied with the service. The website exceeded my expectations, the agreed deadline was met, and Daniel stayed in constant contact, walking me through each stage of the work and taking my feedback on board.",
+      "I was very happy with the partnership."
+    ],
+    "role": "Director · Evolução Máxima"
+  },
+  "Proposal": {
+    "eyebrow": "Let’s get started",
+    "title": "Request your proposal <destaque>for free</destaque>",
+    "description": "Fill out the form and within 2 hours get a tailored proposal with pricing, timeline and full scope.",
+    "confianca": {
+      "seguranca": "Your data is safe",
+      "resposta": "Reply within 2 hours",
+      "compromisso": "No-obligation proposal",
+      "atendimento": "Real people, real support"
+    },
+    "emailPrompt": "Prefer to reach us by email?"
+  },
+  "Form": {
+    "ariaLabel": "Request a proposal",
+    "nome": {
+      "label": "Full name",
+      "placeholder": "Your name"
+    },
+    "empresa": {
+      "label": "Company",
+      "placeholder": "Company name"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "you@email.com"
+    },
+    "telefone": {
+      "label": "Phone / WhatsApp",
+      "placeholder": "+1 555 123 4567"
+    },
+    "plano": {
+      "label": "Plan of interest",
+      "placeholder": "Select a plan"
+    },
+    "mensagem": {
+      "label": "Tell us briefly about your project",
+      "placeholder": "E.g.: I want a landing page for my online course with payment integration..."
+    },
+    "planos": {
+      "starter": "Starter — Landing Page (from R$ 497)",
+      "pro": "Pro — Microsite + Integrations (from R$ 997)",
+      "enterprise": "Enterprise — Custom project",
+      "naoSei": "Not sure yet — I’d like a recommendation"
+    },
+    "honeypot": "Do not fill out this field",
+    "enviando": "Sending...",
+    "enviar": "Send request",
+    "privacidade": "By submitting, you agree to our <link>Privacy Policy</link>.",
+    "erros": {
+      "nomeCurto": "Please enter your name.",
+      "emailInvalido": "Please enter a valid email.",
+      "planoInvalido": "Please select a plan."
+    },
+    "status": {
+      "sucesso": "Request sent successfully! We’ll get back to you within 2 business hours.",
+      "requisicaoInvalida": "Invalid request.",
+      "limiteExcedido": "Too many attempts. Please wait a few minutes and try again.",
+      "camposInvalidos": "Please review the highlighted fields.",
+      "envioIndisponivel": "Sending is unavailable right now. Please email us instead.",
+      "falhaEnvio": "We couldn’t send it right now. Please try again in a moment.",
+      "erroGenerico": "We couldn’t send it. Please try again.",
+      "erroConexao": "Connection error. Check your internet and try again."
+    }
+  },
+  "Footer": {
+    "about": "Turning ideas into pages that sell. High-converting landing pages and microsites with API integrations and automation.",
+    "navTitle": "Navigation",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "servicos": {
+      "landingPage": "Landing Page",
+      "hotsite": "Event Microsite",
+      "apis": "API Integration",
+      "hospedagem": "Hosting & Deployment"
+    },
+    "copyright": "© 2026 <strong>Plivaro</strong>. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
+  },
+  "OpenGraph": {
+    "alt": "Plivaro — Landing pages that turn visitors into real customers",
+    "tituloInicio": "Landing pages that",
+    "tituloDestaque": "turn visitors",
+    "tituloFim": "into real customers.",
+    "subtitulo": "Microsites, integrations and automation · ready in up to 5 business days"
+  },
+  "Privacy": {
+    "metaTitle": "Privacy and Cookie Policy",
+    "metaDescription": "Plivaro’s Privacy and Cookie Policy.",
+    "eyebrow": "Transparency and privacy",
+    "title": "Privacy and Cookie Policy",
+    "intro": "This page explains how Plivaro collects, uses, shares and protects personal data when receiving proposal requests, handling inquiries and operating this website.",
+    "updated": "Last updated: June 28, 2026",
+    "commitment": "Committed to security and transparency",
+    "back": "Back to the home page",
+    "tocTitle": "On this page",
+    "toc": {
+      "privacidade": "Privacy Policy",
+      "cookies": "Cookie Policy",
+      "direitos": "Your rights",
+      "contato": "Contact"
+    },
+    "summaryTitle": "Quick summary",
+    "summary": [
+      "We use your data for contact, proposals and support.",
+      "Cookies help the site, traffic analysis and advertising.",
+      "You can control cookies in your browser.",
+      "Requests and questions can be sent by email."
+    ],
+    "privacidade": {
+      "titulo": "1. Privacy Policy",
+      "p1": "Plivaro respects your privacy and processes personal data only for legitimate, disclosed purposes that are compatible with your relationship with us.",
+      "destaque": "When you fill out the proposal form or contact us, we use the information to respond to your request, prepare the commercial proposal and continue assisting you.",
+      "coletaTitulo": "Data we may collect",
+      "coleta": [
+        "Name, company, email, phone number and message submitted through the site’s forms.",
+        "Browsing data, such as IP address, browser, pages visited, visit duration and traffic source.",
+        "Cookie identifiers and measurement events, when enabled in your browser."
+      ],
+      "usoTitulo": "How we use this information",
+      "uso": [
+        "Responding to inquiries, sending proposals and providing support.",
+        "Improving the browsing experience, site performance and content quality.",
+        "Measuring campaigns, conversions and the performance of ads and analytics.",
+        "Protecting the site against fraud, abuse and misuse."
+      ],
+      "compartilhamentoTitulo": "Sharing",
+      "compartilhamento": "We may share data with providers that help us operate the site and our customer service, such as hosting, email, traffic analysis, advertising and automation services. When this happens, we require these partners to handle the data securely and only for the contracted purpose.",
+      "segurancaTitulo": "Storage and security",
+      "seguranca": "We adopt reasonable technical and administrative measures to protect information against unauthorized access, alteration, disclosure or improper destruction. We keep data for as long as necessary to fulfill the purposes of this policy, legal obligations and the defense of rights."
+    },
+    "cookies": {
+      "titulo": "2. Cookie Policy",
+      "p1": "Cookies are small files stored in your browser so the site works properly, remembers preferences and helps measure page usage.",
+      "tiposTitulo": "Types of cookies that may be used",
+      "tipos": [
+        { "termo": "Essential:", "texto": "required for navigation, security and form functionality." },
+        { "termo": "Performance:", "texto": "help us understand how visitors use the site so we can improve content and speed." },
+        { "termo": "Functional:", "texto": "remember preferences and make the experience more convenient." },
+        { "termo": "Advertising and measurement:", "texto": "may be used by tools such as Google Analytics, Google Ads and similar services." }
+      ],
+      "terceirosTitulo": "Third-party tools",
+      "terceiros": "This site may use third-party tools for traffic analysis and advertising, including measurement and advertising scripts. These services may set their own cookies to measure results and improve campaign relevance.",
+      "gerenciarTitulo": "How to manage cookies",
+      "gerenciar": "You can block, delete or configure cookies directly in your browser preferences. If you disable essential cookies, some parts of the site may not work properly."
+    },
+    "direitos": {
+      "titulo": "3. Your rights",
+      "p1": "Where applicable, you may request information about the data we process and exercise rights related to its use.",
+      "lista": [
+        "Confirmation that processing takes place.",
+        "Access to, correction and updating of your data.",
+        "Request for deletion, restriction of or objection to processing, where applicable.",
+        "Withdrawal of consent, when processing relies on that legal basis."
+      ]
+    },
+    "contato": {
+      "titulo": "4. Contact",
+      "p1": "For questions, requests or to exercise rights related to this policy, contact Plivaro at <email></email>.",
+      "p2": "We may update this document periodically to reflect changes to the site, the tools we use or legal requirements. We recommend reviewing this page from time to time."
+    }
+  }
+}

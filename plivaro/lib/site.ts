@@ -8,6 +8,9 @@ import {
   Rocket,
 } from "lucide-react";
 
+// Os textos do site ficam em messages/<idioma>.json. Aqui ficam só os dados
+// que não mudam com o idioma.
+
 /** URL pública do site. Pode ser sobrescrita por NEXT_PUBLIC_SITE_URL. */
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://plivaro.com"
@@ -15,118 +18,44 @@ export const SITE_URL = (
 
 export const site = {
   name: "Plivaro",
-  title: "Plivaro | Landing Pages e Sites Profissionais",
-  description:
-    "Criamos landing pages e hotsites de alta conversão com integração de APIs e automações. Solicite sua proposta grátis.",
   contactEmail: "daniel@plivaro.com",
   privacyEmail: "abidala@plivaro.com",
-  location: "São Paulo, SP — Brasil",
-  hours: "Seg–Sex · 9h às 18h",
   gaId: "G-4LMB7WFWT4",
   adsenseClient: "ca-pub-8360693037438432",
 };
 
+/** Links do menu; o texto vem de messages › Nav. */
 export const navLinks = [
-  { href: "/#servicos", label: "Serviços" },
-  { href: "/#como-funciona", label: "Como funciona" },
-  { href: "/#depoimentos", label: "Depoimentos" },
-  { href: "/#proposta", label: "Falar com especialista" },
-];
+  { href: "/#servicos", key: "servicos" },
+  { href: "/#como-funciona", key: "comoFunciona" },
+  { href: "/#depoimentos", key: "depoimentos" },
+  { href: "/#proposta", key: "especialista" },
+] as const;
 
-export type Service = {
-  title: string;
-  description: string;
-  items: string[];
+/** Serviços; título, descrição e itens vêm de messages › Services.items. */
+export const services: {
+  key: "landingPage" | "hotsite" | "apis" | "proposta" | "analytics" | "hospedagem";
   icon: LucideIcon;
   color: string;
-};
-
-export const services: Service[] = [
-  {
-    title: "Landing Page",
-    description:
-      "Página de vendas otimizada para conversão, com design profissional, copy persuasivo e carregamento ultrarrápido.",
-    items: ["Responsivo (mobile first)", "SEO on-page", "Pixel de rastreamento"],
-    icon: LayoutTemplate,
-    color: "#6C63FF",
-  },
-  {
-    title: "Hotsite",
-    description:
-      "Página de campanha ou lançamento com contagem regressiva, inscrições e notificações automáticas.",
-    items: ["Countdown dinâmico", "Lista de espera", "E-mail automático"],
-    icon: Flame,
-    color: "#FF6B6B",
-  },
-  {
-    title: "Integração com APIs",
-    description:
-      "Conectamos sua página a CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart e muito mais.",
-    items: ["Webhook personalizado", "RD Station / HubSpot", "Pagamento online"],
-    icon: Plug,
-    color: "#00BFA6",
-  },
-  {
-    title: "Envio de Proposta",
-    description:
-      "Formulário inteligente que captura o lead e envia a proposta formatada por e-mail automaticamente, em segundos.",
-    items: ["E-mail transacional", "Notificação imediata", "Anti-spam integrado"],
-    icon: MailCheck,
-    color: "#F7B731",
-  },
-  {
-    title: "Analytics & Rastreamento",
-    description:
-      "Instalação de GA4, Meta Pixel, GTM e heatmaps para você saber exatamente de onde vêm seus leads.",
-    items: ["Google Analytics 4", "Meta Pixel + CAPI", "Heatmap / Hotjar"],
-    icon: ChartLine,
-    color: "#A855F7",
-  },
-  {
-    title: "Hospedagem & Deploy",
-    description:
-      "Publicamos sua página em domínio próprio com HTTPS, CDN global e uptime de 99,9%.",
-    items: ["SSL gratuito", "CDN global", "Deploy em minutos"],
-    icon: Rocket,
-    color: "#3B82F6",
-  },
+}[] = [
+  { key: "landingPage", icon: LayoutTemplate, color: "#6C63FF" },
+  { key: "hotsite", icon: Flame, color: "#FF6B6B" },
+  { key: "apis", icon: Plug, color: "#00BFA6" },
+  { key: "proposta", icon: MailCheck, color: "#F7B731" },
+  { key: "analytics", icon: ChartLine, color: "#A855F7" },
+  { key: "hospedagem", icon: Rocket, color: "#3B82F6" },
 ];
 
+/** Passos do processo, na ordem; o texto vem de messages › Process.steps. */
 export const steps = [
-  {
-    title: "Solicite sua proposta",
-    description:
-      "Preencha o formulário abaixo. Em até 2 horas você recebe a proposta com valores e cronograma.",
-  },
-  {
-    title: "Briefing & aprovação",
-    description:
-      "Nossa equipe entra em contato, entende seu negócio e envia o briefing completo para aprovação.",
-  },
-  {
-    title: "Desenvolvimento",
-    description:
-      "Criamos design, código e integrações. Você acompanha o progresso em tempo real.",
-  },
-  {
-    title: "Revisão & ajustes",
-    description:
-      "Rodadas de revisão ilimitadas. Você aprova cada detalhe antes do lançamento.",
-  },
-  {
-    title: "Publicação & suporte",
-    description:
-      "Sua página vai ao ar. Suporte técnico incluso por 30 dias após a entrega.",
-  },
-];
+  "solicite",
+  "briefing",
+  "desenvolvimento",
+  "revisao",
+  "publicacao",
+] as const;
 
 export const testimonial = {
-  paragraphs: [
-    "Contratei o Daniel Ajala para construir um site institucional para um produto de minha empresa, a Evolução Máxima.",
-    "Fiquei muito satisfeito com o serviço prestado. O site superou minhas expectativas, o prazo combinado foi cumprido e o Daniel manteve contato permanente, apresentando as etapas do trabalho e aceitando os feedbacks.",
-    "Fiquei muito satisfeito com a parceria.",
-  ],
   author: "Edson Procópio",
-  role: "Diretor · Evolução Máxima",
   initials: "EP",
 };

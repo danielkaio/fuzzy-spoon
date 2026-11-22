@@ -1,0 +1,298 @@
+{
+  "Metadata": {
+    "title": "Plivaro | Landing Pages e Sites Profissionais",
+    "description": "Criamos landing pages e hotsites de alta conversão com integração de APIs e automações. Solicite sua proposta grátis.",
+    "ogLocale": "pt_BR"
+  },
+  "Layout": {
+    "skipToContent": "Pular para o conteúdo"
+  },
+  "Site": {
+    "location": "São Paulo, SP — Brasil",
+    "hours": "Seg–Sex · 9h às 18h"
+  },
+  "Logo": {
+    "ariaLabel": "Plivaro, página inicial"
+  },
+  "LocaleSwitcher": {
+    "label": "EN",
+    "ariaLabel": "English version"
+  },
+  "Nav": {
+    "servicos": "Serviços",
+    "comoFunciona": "Como funciona",
+    "depoimentos": "Depoimentos",
+    "especialista": "Falar com especialista",
+    "faleConosco": "Fale conosco"
+  },
+  "Header": {
+    "mainNav": "Principal",
+    "mobileNav": "Menu",
+    "cta": "Solicitar proposta",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "backToSite": "Voltar ao site"
+  },
+  "Hero": {
+    "badge": "Pronto em até 5 dias úteis",
+    "title": "Landing pages que <br></br><destaque>convertem visitantes</destaque><br></br> em clientes reais.",
+    "subtitle": "Desenvolvemos hotsites e landing pages de alta performance com integração de APIs, automações e envio de propostas — prontos em até 5 dias úteis.",
+    "ctaPrimary": "Solicitar proposta grátis",
+    "ctaSecondary": "Ver como funciona",
+    "garantias": {
+      "contrato": "Sem contrato longo",
+      "entrega": "Entrega em 5 dias",
+      "suporte": "Suporte incluso"
+    },
+    "mockup": {
+      "url": "plivaro/minha-empresa",
+      "aprovada": "✅ Proposta aprovada!",
+      "emailEnviado": "E-mail enviado!",
+      "conversao": "+320% conversão",
+      "stats": {
+        "aprovacao": "Aprovação",
+        "entrega": "Entrega",
+        "suporte": "Suporte"
+      }
+    }
+  },
+  "Services": {
+    "label": "O que entregamos",
+    "title": "Soluções digitais completas",
+    "description": "Desde a criação da página até a integração com seus sistemas — tudo em um único lugar.",
+    "items": {
+      "landingPage": {
+        "title": "Landing Page",
+        "description": "Página de vendas otimizada para conversão, com design profissional, copy persuasivo e carregamento ultrarrápido.",
+        "lista": ["Responsivo (mobile first)", "SEO on-page", "Pixel de rastreamento"]
+      },
+      "hotsite": {
+        "title": "Hotsite",
+        "description": "Página de campanha ou lançamento com contagem regressiva, inscrições e notificações automáticas.",
+        "lista": ["Countdown dinâmico", "Lista de espera", "E-mail automático"]
+      },
+      "apis": {
+        "title": "Integração com APIs",
+        "description": "Conectamos sua página a CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart e muito mais.",
+        "lista": ["Webhook personalizado", "RD Station / HubSpot", "Pagamento online"]
+      },
+      "proposta": {
+        "title": "Envio de Proposta",
+        "description": "Formulário inteligente que captura o lead e envia a proposta formatada por e-mail automaticamente, em segundos.",
+        "lista": ["E-mail transacional", "Notificação imediata", "Anti-spam integrado"]
+      },
+      "analytics": {
+        "title": "Analytics & Rastreamento",
+        "description": "Instalação de GA4, Meta Pixel, GTM e heatmaps para você saber exatamente de onde vêm seus leads.",
+        "lista": ["Google Analytics 4", "Meta Pixel + CAPI", "Heatmap / Hotjar"]
+      },
+      "hospedagem": {
+        "title": "Hospedagem & Deploy",
+        "description": "Publicamos sua página em domínio próprio com HTTPS, CDN global e uptime de 99,9%.",
+        "lista": ["SSL gratuito", "CDN global", "Deploy em minutos"]
+      }
+    }
+  },
+  "Process": {
+    "label": "Processo",
+    "title": "Como funciona",
+    "description": "Do briefing ao ar em 5 passos simples.",
+    "cta": "Começar pelo passo 1",
+    "steps": {
+      "solicite": {
+        "title": "Solicite sua proposta",
+        "description": "Preencha o formulário abaixo. Em até 2 horas você recebe a proposta com valores e cronograma."
+      },
+      "briefing": {
+        "title": "Briefing & aprovação",
+        "description": "Nossa equipe entra em contato, entende seu negócio e envia o briefing completo para aprovação."
+      },
+      "desenvolvimento": {
+        "title": "Desenvolvimento",
+        "description": "Criamos design, código e integrações. Você acompanha o progresso em tempo real."
+      },
+      "revisao": {
+        "title": "Revisão & ajustes",
+        "description": "Rodadas de revisão ilimitadas. Você aprova cada detalhe antes do lançamento."
+      },
+      "publicacao": {
+        "title": "Publicação & suporte",
+        "description": "Sua página vai ao ar. Suporte técnico incluso por 30 dias após a entrega."
+      }
+    }
+  },
+  "Testimonial": {
+    "label": "Feedback de clientes",
+    "title": "O que dizem nossos clientes",
+    "description": "A confiança de quem já trabalhou conosco é o nosso maior case.",
+    "rating": "Avaliação 5 de 5 estrelas",
+    "paragraphs": [
+      "Contratei o Daniel Ajala para construir um site institucional para um produto de minha empresa, a Evolução Máxima.",
+      "Fiquei muito satisfeito com o serviço prestado. O site superou minhas expectativas, o prazo combinado foi cumprido e o Daniel manteve contato permanente, apresentando as etapas do trabalho e aceitando os feedbacks.",
+      "Fiquei muito satisfeito com a parceria."
+    ],
+    "role": "Diretor · Evolução Máxima"
+  },
+  "Proposal": {
+    "eyebrow": "Vamos começar",
+    "title": "Solicite sua proposta <destaque>gratuitamente</destaque>",
+    "description": "Preencha o formulário e receba em até 2 horas uma proposta personalizada com valores, prazo e escopo completo.",
+    "confianca": {
+      "seguranca": "Seus dados estão seguros",
+      "resposta": "Resposta em até 2 horas",
+      "compromisso": "Proposta sem compromisso",
+      "atendimento": "Atendimento humanizado"
+    },
+    "emailPrompt": "Prefere falar por e-mail?"
+  },
+  "Form": {
+    "ariaLabel": "Solicitar proposta",
+    "nome": {
+      "label": "Nome completo",
+      "placeholder": "Seu nome"
+    },
+    "empresa": {
+      "label": "Empresa",
+      "placeholder": "Nome da empresa"
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "seu@email.com"
+    },
+    "telefone": {
+      "label": "Telefone / WhatsApp",
+      "placeholder": "(11) 99999-9999"
+    },
+    "plano": {
+      "label": "Plano de interesse",
+      "placeholder": "Selecione um plano"
+    },
+    "mensagem": {
+      "label": "Conte brevemente sobre seu projeto",
+      "placeholder": "Ex.: Quero uma landing page para meu curso online com integração de pagamento..."
+    },
+    "planos": {
+      "starter": "Starter — Landing Page (a partir de R$ 497)",
+      "pro": "Pro — Hotsite + Integrações (a partir de R$ 997)",
+      "enterprise": "Enterprise — Projeto customizado",
+      "naoSei": "Ainda não sei — quero indicação"
+    },
+    "honeypot": "Não preencha este campo",
+    "enviando": "Enviando...",
+    "enviar": "Enviar proposta",
+    "privacidade": "Ao enviar, você concorda com nossa <link>Política de Privacidade</link>.",
+    "erros": {
+      "nomeCurto": "Informe seu nome.",
+      "emailInvalido": "Informe um e-mail válido.",
+      "planoInvalido": "Selecione um plano."
+    },
+    "status": {
+      "sucesso": "Proposta enviada com sucesso! Retornaremos em até 2 horas úteis.",
+      "requisicaoInvalida": "Requisição inválida.",
+      "limiteExcedido": "Muitas tentativas. Aguarde alguns minutos e tente novamente.",
+      "camposInvalidos": "Revise os campos destacados.",
+      "envioIndisponivel": "Envio indisponível no momento. Escreva para nós por e-mail.",
+      "falhaEnvio": "Não foi possível enviar agora. Tente novamente em instantes.",
+      "erroGenerico": "Não foi possível enviar. Tente novamente.",
+      "erroConexao": "Erro de conexão. Verifique sua internet e tente novamente."
+    }
+  },
+  "Footer": {
+    "about": "Transformando ideias em páginas que vendem. Landing pages e hotsites de alta conversão com integração de APIs e automações.",
+    "navTitle": "Navegação",
+    "servicesTitle": "Serviços",
+    "contactTitle": "Contato",
+    "servicos": {
+      "landingPage": "Landing Page",
+      "hotsite": "Hotsite de Evento",
+      "apis": "Integração com APIs",
+      "hospedagem": "Hospedagem & Deploy"
+    },
+    "copyright": "© 2026 <strong>Plivaro</strong>. Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "cookies": "Política de Cookies"
+  },
+  "OpenGraph": {
+    "alt": "Plivaro — Landing pages que convertem visitantes em clientes reais",
+    "tituloInicio": "Landing pages que",
+    "tituloDestaque": "convertem visitantes",
+    "tituloFim": "em clientes reais.",
+    "subtitulo": "Hotsites, integrações e automações · prontos em até 5 dias úteis"
+  },
+  "Privacy": {
+    "metaTitle": "Política de Privacidade e Cookies",
+    "metaDescription": "Política de Privacidade e Cookies da Plivaro.",
+    "eyebrow": "Transparência e privacidade",
+    "title": "Política de Privacidade e Cookies",
+    "intro": "Esta página explica como a Plivaro coleta, usa, compartilha e protege dados pessoais ao receber pedidos de proposta, atender contatos e operar este site.",
+    "updated": "Última atualização: 28/06/2026",
+    "commitment": "Compromisso com segurança e transparência",
+    "back": "Voltar para a página inicial",
+    "tocTitle": "Nesta página",
+    "toc": {
+      "privacidade": "Política de Privacidade",
+      "cookies": "Política de Cookies",
+      "direitos": "Seus direitos",
+      "contato": "Contato"
+    },
+    "summaryTitle": "Resumo rápido",
+    "summary": [
+      "Usamos seus dados para contato, proposta e suporte.",
+      "Cookies ajudam o site, a análise de tráfego e a publicidade.",
+      "Você pode controlar cookies no seu navegador.",
+      "Pedidos e dúvidas podem ser enviados por e-mail."
+    ],
+    "privacidade": {
+      "titulo": "1. Política de Privacidade",
+      "p1": "A Plivaro respeita a sua privacidade e trata dados pessoais apenas para finalidades legítimas, informadas e compatíveis com a relação que você mantém conosco.",
+      "destaque": "Quando você preenche o formulário de proposta ou entra em contato, usamos as informações para responder sua solicitação, montar a proposta comercial e dar continuidade ao atendimento.",
+      "coletaTitulo": "Dados que podemos coletar",
+      "coleta": [
+        "Nome, empresa, e-mail, telefone e mensagem enviados nos formulários do site.",
+        "Dados de navegação, como endereço IP, navegador, páginas acessadas, tempo de visita e origem do acesso.",
+        "Identificadores de cookies e eventos de medição, quando habilitados no navegador."
+      ],
+      "usoTitulo": "Como usamos essas informações",
+      "uso": [
+        "Responder contatos, enviar propostas e prestar suporte.",
+        "Melhorar a experiência de navegação, desempenho do site e qualidade do conteúdo.",
+        "Medir campanhas, conversões e desempenho de anúncios e analytics.",
+        "Proteger o site contra fraude, abuso e uso indevido."
+      ],
+      "compartilhamentoTitulo": "Compartilhamento",
+      "compartilhamento": "Podemos compartilhar dados com fornecedores que nos ajudam a operar o site e o atendimento, como serviços de hospedagem, e-mail, análise de tráfego, publicidade e automação. Quando isso acontece, exigimos que esses parceiros tratem os dados com segurança e apenas para a finalidade contratada.",
+      "segurancaTitulo": "Armazenamento e segurança",
+      "seguranca": "Adotamos medidas técnicas e administrativas razoáveis para proteger as informações contra acesso não autorizado, alteração, divulgação ou destruição indevida. Mantemos os dados pelo tempo necessário para cumprir as finalidades desta política, obrigações legais e defesa de direitos."
+    },
+    "cookies": {
+      "titulo": "2. Política de Cookies",
+      "p1": "Cookies são pequenos arquivos gravados no seu navegador para que o site funcione corretamente, lembre preferências e ajude a medir o uso da página.",
+      "tiposTitulo": "Tipos de cookies que podem ser usados",
+      "tipos": [
+        { "termo": "Essenciais:", "texto": "necessários para navegação, segurança e funcionamento de formulários." },
+        { "termo": "Desempenho:", "texto": "ajudam a entender como os visitantes usam o site para melhorar conteúdo e velocidade." },
+        { "termo": "Funcionais:", "texto": "lembram preferências e tornam a experiência mais prática." },
+        { "termo": "Publicidade e medição:", "texto": "podem ser usados por ferramentas como Google Analytics, Google Ads e serviços semelhantes." }
+      ],
+      "terceirosTitulo": "Ferramentas de terceiros",
+      "terceiros": "Este site pode usar ferramentas de terceiros para análise de acesso e anúncios, incluindo scripts de medição e publicidade. Esses serviços podem definir cookies próprios para medir resultados e melhorar a relevância de campanhas.",
+      "gerenciarTitulo": "Como gerenciar cookies",
+      "gerenciar": "Você pode bloquear, apagar ou configurar cookies diretamente nas preferências do seu navegador. Ao desativar cookies essenciais, algumas partes do site podem não funcionar corretamente."
+    },
+    "direitos": {
+      "titulo": "3. Seus direitos",
+      "p1": "Você pode solicitar, conforme aplicável, informações sobre os dados tratados e exercer direitos relacionados ao seu uso.",
+      "lista": [
+        "Confirmação da existência de tratamento.",
+        "Acesso, correção e atualização de dados.",
+        "Solicitação de exclusão, limitação ou oposição ao tratamento, quando cabível.",
+        "Revogação de consentimento, quando o tratamento depender dessa base legal."
+      ]
+    },
+    "contato": {
+      "titulo": "4. Contato",
+      "p1": "Para dúvidas, solicitações ou exercício de direitos relacionados a esta política, fale com a Plivaro pelo e-mail <email></email>.",
+      "p2": "Podemos atualizar este documento periodicamente para refletir mudanças no site, em ferramentas utilizadas ou em exigências legais. Recomendamos revisar esta página de tempos em tempos."
+    }
+  }
+}

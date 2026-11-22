@@ -2,11 +2,16 @@
 
 import { useState } from "react";
 import { CircleCheck, LoaderCircle, Send, TriangleAlert } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
+  CODIGOS_RESPOSTA,
   PLANOS,
   formatarTelefone,
   validarProposta,
   type CampoProposta,
+  type CodigoErro,
+  type CodigoResposta,
   type ErrosProposta,
 } from "@/lib/proposta";
 
@@ -19,12 +24,21 @@ type Status =
 const inputBase =
   "w-full rounded-xl border-[1.5px] bg-white px-3.5 py-3 text-[0.95rem] text-fg outline-none transition placeholder:text-muted/70 focus:border-brand focus:ring-4 focus:ring-brand/10";
 
+function ehCodigoResposta(valor: unknown): valor is CodigoResposta {
+  return CODIGOS_RESPOSTA.includes(valor as CodigoResposta);
+}
+
 export function ProposalForm() {
+  const t = useTranslations("Form");
+  const locale = useLocale();
   const [erros, setErros] = useState<ErrosProposta>({});
   const [status, setStatus] = useState<Status>({ tipo: "ocioso" });
   const [telefone, setTelefone] = useState("");
 
   const enviando = status.tipo === "enviando";
+  // A máscara (11) 99999-9999 só faz sentido para números brasileiros.
+  const mascararTelefone = locale === "pt-BR";
+  const erro = (codigo?: CodigoErro) => (codigo ? t(`erros.${codigo}`) : undefined);
 
   function limparErro(campo: CampoProposta) {
     if (erros[campo]) setErros((e) => ({ ...e, [campo]: undefined }));
@@ -51,35 +65,31 @@ export function ProposalForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // `website` é o campo isca anti-spam: humanos não o veem.
-        body: JSON.stringify({ ...resultado.dados, website: entrada.website }),
+        body: JSON.stringify({
+          ...resultado.dados,
+          website: entrada.website,
+          idioma: locale,
+        }),
       });
       const data = (await res.json().catch(() => ({}))) as {
-        message?: string;
-        error?: string;
+        code?: unknown;
         fields?: ErrosProposta;
       };
+      const codigo = ehCodigoResposta(data.code) ? data.code : undefined;
 
       if (res.ok) {
-        setStatus({
-          tipo: "sucesso",
-          mensagem:
-            data.message ??
-            "Proposta enviada! Retornaremos em até 2 horas úteis.",
-        });
+        setStatus({ tipo: "sucesso", mensagem: t("status.sucesso") });
         form.reset();
         setTelefone("");
       } else {
         if (data.fields) setErros(data.fields);
         setStatus({
           tipo: "erro",
-          mensagem: data.error ?? "Não foi possível enviar. Tente novamente.",
+          mensagem: t(`status.${codigo ?? "erroGenerico"}`),
         });
       }
     } catch {
-      setStatus({
-        tipo: "erro",
-        mensagem: "Erro de conexão. Verifique sua internet e tente novamente.",
-      });
+      setStatus({ tipo: "erro", mensagem: t("status.erroConexao") });
     }
   }
 
@@ -87,17 +97,17 @@ export function ProposalForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      aria-label="Solicitar proposta"
+      aria-label={t("ariaLabel")}
       className="reveal relative rounded-3xl border border-line bg-white p-6 shadow-[0_8px_40px_rgba(0,0,0,0.06)] sm:p-9"
     >
       <div className="grid gap-x-4 sm:grid-cols-2">
-        <Campo id="nome" label="Nome completo" obrigatorio erro={erros.nome}>
+        <Campo id="nome" label={t("nome.label")} obrigatorio erro={erro(erros.nome)}>
           <input
             id="nome"
             name="nome"
             type="text"
             autoComplete="name"
-            placeholder="Seu nome"
+            placeholder={t("nome.placeholder")}
             required
             maxLength={120}
             onChange={() => limparErro("nome")}
@@ -105,25 +115,25 @@ export function ProposalForm() {
             className={`${inputBase} ${borda(erros.nome)}`}
           />
         </Campo>
-        <Campo id="empresa" label="Empresa">
+        <Campo id="empresa" label={t("empresa.label")}>
           <input
             id="empresa"
             name="empresa"
             type="text"
             autoComplete="organization"
-            placeholder="Nome da empresa"
+            placeholder={t("empresa.placeholder")}
             maxLength={120}
             className={`${inputBase} ${borda()}`}
           />
         </Campo>
-        <Campo id="email" label="E-mail" obrigatorio erro={erros.email}>
+        <Campo id="email" label={t("email.label")} obrigatorio erro={erro(erros.email)}>
           <input
             id="email"
             name="email"
             type="email"
             autoComplete="email"
             inputMode="email"
-            placeholder="seu@email.com"
+            placeholder={t("email.placeholder")}
             required
             maxLength={254}
             onChange={() => limparErro("email")}
@@ -131,22 +141,27 @@ export function ProposalForm() {
             className={`${inputBase} ${borda(erros.email)}`}
           />
         </Campo>
-        <Campo id="telefone" label="Telefone / WhatsApp">
+        <Campo id="telefone" label={t("telefone.label")}>
           <input
             id="telefone"
             name="telefone"
             type="tel"
-            autoComplete="tel-national"
+            autoComplete={mascararTelefone ? "tel-national" : "tel"}
             inputMode="tel"
-            placeholder="(11) 99999-9999"
+            placeholder={t("telefone.placeholder")}
+            maxLength={30}
             value={telefone}
-            onChange={(e) => setTelefone(formatarTelefone(e.target.value))}
+            onChange={(e) =>
+              setTelefone(
+                mascararTelefone ? formatarTelefone(e.target.value) : e.target.value,
+              )
+            }
             className={`${inputBase} ${borda()}`}
           />
         </Campo>
       </div>
 
-      <Campo id="plano" label="Plano de interesse" obrigatorio erro={erros.plano}>
+      <Campo id="plano" label={t("plano.label")} obrigatorio erro={erro(erros.plano)}>
         <select
           id="plano"
           name="plano"
@@ -157,30 +172,30 @@ export function ProposalForm() {
           className={`${inputBase} ${borda(erros.plano)} appearance-none bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='none'%20stroke='%235f6675'%20stroke-width='2'%3E%3Cpath%20d='m4%206%204%204%204-4'/%3E%3C/svg%3E")] bg-position-[right_1rem_center] bg-no-repeat pr-10`}
         >
           <option value="" disabled>
-            Selecione um plano
+            {t("plano.placeholder")}
           </option>
           {PLANOS.map((p) => (
             <option key={p.value} value={p.value}>
-              {p.label}
+              {t(`planos.${p.key}`)}
             </option>
           ))}
         </select>
       </Campo>
 
-      <Campo id="mensagem" label="Conte brevemente sobre seu projeto">
+      <Campo id="mensagem" label={t("mensagem.label")}>
         <textarea
           id="mensagem"
           name="mensagem"
           rows={4}
           maxLength={2000}
-          placeholder="Ex.: Quero uma landing page para meu curso online com integração de pagamento..."
+          placeholder={t("mensagem.placeholder")}
           className={`${inputBase} ${borda()} min-h-28 resize-y`}
         />
       </Campo>
 
       {/* Campo isca: escondido de pessoas, preenchido por robôs. */}
       <div aria-hidden className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
-        <label htmlFor="website">Não preencha este campo</label>
+        <label htmlFor="website">{t("honeypot")}</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
 
@@ -192,12 +207,12 @@ export function ProposalForm() {
         {enviando ? (
           <>
             <LoaderCircle className="size-5 animate-spin" aria-hidden />
-            Enviando...
+            {t("enviando")}
           </>
         ) : (
           <>
             <Send className="size-4" aria-hidden />
-            Enviar proposta
+            {t("enviar")}
           </>
         )}
       </button>
@@ -218,14 +233,16 @@ export function ProposalForm() {
       </div>
 
       <p className="mt-5 text-center text-xs text-muted">
-        Ao enviar, você concorda com nossa{" "}
-        <a
-          href="/politica-privacidade-cookies#privacidade"
-          className="font-medium text-brand-dark underline-offset-2 hover:underline"
-        >
-          Política de Privacidade
-        </a>
-        .
+        {t.rich("privacidade", {
+          link: (chunks) => (
+            <Link
+              href="/politica-privacidade-cookies#privacidade"
+              className="font-medium text-brand-dark underline-offset-2 hover:underline"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
       </p>
     </form>
   );
