@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/site";
+import { SITE_URL, serviceHref, services } from "@/lib/site";
 
 const paginas: {
   href: string;
@@ -9,7 +9,13 @@ const paginas: {
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
   priority: number;
 }[] = [
-  { href: "/", lastModified: "2026-11-17", changeFrequency: "weekly", priority: 1 },
+  { href: "/", lastModified: "2026-11-25", changeFrequency: "weekly", priority: 1 },
+  ...services.map((s) => ({
+    href: serviceHref(s),
+    lastModified: "2026-11-25",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  })),
   {
     href: "/politica-privacidade-cookies",
     lastModified: "2026-06-28",

@@ -60,6 +60,8 @@
     "label": "O que entregamos",
     "title": "Soluções digitais completas",
     "description": "Desde a criação da página até a integração com seus sistemas — tudo em um único lugar.",
+    "learnMore": "Saiba mais",
+    "learnMoreAria": "Saiba mais sobre {servico}",
     "items": {
       "landingPage": {
         "title": "Landing Page",
@@ -197,6 +199,232 @@
       "erroConexao": "Erro de conexão. Verifique sua internet e tente novamente."
     }
   },
+  "ServicePage": {
+    "breadcrumb": {
+      "ariaLabel": "Você está aqui",
+      "home": "Início",
+      "services": "Serviços"
+    },
+    "ctaPrimary": "Solicitar proposta grátis",
+    "ctaSecondary": "Ver todos os serviços",
+    "destaquesTitulo": "Destaques",
+    "garantiasTitulo": "Em todo projeto",
+    "garantias": [
+      "Proposta em até 2 horas",
+      "Revisões ilimitadas antes do lançamento",
+      "Suporte técnico por 30 dias após a entrega"
+    ],
+    "inclusoLabel": "O que está incluso",
+    "inclusoTitle": "Tudo o que você recebe",
+    "beneficiosLabel": "Por que contratar",
+    "beneficiosTitle": "O que muda no seu negócio",
+    "idealTitulo": "Ideal para",
+    "faqLabel": "Dúvidas",
+    "faqTitle": "Perguntas frequentes",
+    "outrosLabel": "Outros serviços",
+    "outrosTitle": "Combine com outras soluções",
+    "outrosDescription": "Os serviços funcionam juntos: monte o pacote que faz sentido para o seu projeto.",
+    "items": {
+      "landingPage": {
+        "metaTitle": "Criação de Landing Page de Alta Conversão",
+        "metaDescription": "Landing pages com design profissional, copy persuasivo, SEO on-page e carregamento ultrarrápido. Pronta em até 5 dias úteis. Solicite sua proposta grátis.",
+        "headline": "Landing pages feitas para <destaque>vender</destaque>",
+        "intro": "Uma página única, focada em um objetivo: transformar o visitante em lead ou cliente. Cuidamos do design, do texto, da velocidade e da medição — você cuida das vendas.",
+        "incluso": [
+          "Design exclusivo alinhado à sua marca",
+          "Layout responsivo, pensado primeiro para o celular",
+          "Estrutura de copy focada em conversão",
+          "SEO on-page: títulos, meta tags e dados estruturados",
+          "Formulário de captura de leads",
+          "Pixel de rastreamento e eventos de conversão",
+          "Otimização de imagens e carregamento rápido",
+          "Botão de WhatsApp e links para redes sociais"
+        ],
+        "beneficios": [
+          { "titulo": "Mais conversão", "texto": "Cada seção tem um papel: atrair, convencer e levar ao clique. Nada de distrações que tiram o visitante do caminho." },
+          { "titulo": "Carregamento rápido", "texto": "Página leve e otimizada, que abre rápido mesmo em conexões móveis — e não desperdiça o dinheiro dos seus anúncios." },
+          { "titulo": "Resultados medidos", "texto": "Rastreamento configurado desde o primeiro dia para você saber quantos visitantes viraram leads." }
+        ],
+        "idealPara": [
+          "Lançamento de produtos e cursos online",
+          "Campanhas de Google Ads e Meta Ads",
+          "Captação de leads para prestadores de serviço",
+          "Validação rápida de uma ideia de negócio"
+        ],
+        "faq": [
+          { "pergunta": "Em quanto tempo a landing page fica pronta?", "resposta": "Em até 5 dias úteis após a aprovação do briefing, na maioria dos projetos. Páginas com integrações mais complexas podem levar um pouco mais — o prazo exato vem na proposta." },
+          { "pergunta": "Quanto custa uma landing page?", "resposta": "O plano Starter começa em R$ 497. O valor final depende do número de seções, do conteúdo e das integrações; você recebe a proposta detalhada em até 2 horas." },
+          { "pergunta": "Preciso enviar os textos e as imagens?", "resposta": "Não necessariamente. Podemos escrever a copy a partir do briefing e usar imagens de bancos licenciados. Se você já tiver material, melhor ainda." },
+          { "pergunta": "Posso pedir alterações depois de pronta?", "resposta": "Sim. As revisões são ilimitadas até você aprovar o lançamento, e o suporte técnico continua por 30 dias após a entrega." }
+        ]
+      },
+      "hotsite": {
+        "metaTitle": "Hotsite para Campanhas, Eventos e Lançamentos",
+        "metaDescription": "Hotsites com contagem regressiva, inscrições, lista de espera e e-mails automáticos para campanhas, eventos e lançamentos. Solicite sua proposta grátis.",
+        "headline": "Hotsites que fazem seu lançamento <destaque>acontecer</destaque>",
+        "intro": "Uma página de campanha com data marcada: contagem regressiva, inscrições, lista de espera e notificações automáticas para manter o público engajado até o grande dia.",
+        "incluso": [
+          "Design temático para a campanha ou evento",
+          "Contagem regressiva dinâmica",
+          "Formulário de inscrição ou lista de espera",
+          "E-mail automático de confirmação",
+          "Seções de programação, palestrantes ou ofertas",
+          "Integração com sua ferramenta de e-mail marketing",
+          "Rastreamento de inscrições e origem do tráfego",
+          "Página de agradecimento personalizada"
+        ],
+        "beneficios": [
+          { "titulo": "Senso de urgência", "texto": "A contagem regressiva e as vagas limitadas incentivam o visitante a se inscrever agora, não depois." },
+          { "titulo": "Público aquecido", "texto": "Quem entra na lista recebe confirmação na hora e chega ao lançamento já interessado." },
+          { "titulo": "Campanha sob controle", "texto": "Você acompanha inscrições e canais de origem em tempo real para ajustar a divulgação." }
+        ],
+        "idealPara": [
+          "Eventos presenciais e online",
+          "Lançamentos de infoprodutos",
+          "Campanhas sazonais e promoções",
+          "Pré-venda e lista de espera de produtos"
+        ],
+        "faq": [
+          { "pergunta": "Qual a diferença entre hotsite e landing page?", "resposta": "A landing page foca em uma conversão contínua. O hotsite é feito para uma campanha com data definida e costuma ter mais conteúdo: programação, contagem regressiva, inscrições e comunicação automática." },
+          { "pergunta": "O hotsite continua no ar depois do evento?", "resposta": "Sim, se você quiser. Podemos transformá-lo em uma página de conteúdo gravado, de próxima edição ou redirecioná-lo para outro endereço." },
+          { "pergunta": "Quanto custa um hotsite?", "resposta": "O plano Pro, com hotsite e integrações, começa em R$ 997. O valor final depende do escopo e vem detalhado na proposta." },
+          { "pergunta": "Consigo exportar a lista de inscritos?", "resposta": "Sim. Os inscritos podem ir direto para sua ferramenta de e-mail marketing ou CRM, ou ser exportados em planilha." }
+        ]
+      },
+      "apis": {
+        "metaTitle": "Integração com APIs, CRMs e Meios de Pagamento",
+        "metaDescription": "Conectamos sua página a CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart, RD Station, HubSpot e webhooks personalizados. Solicite sua proposta.",
+        "headline": "Sua página <destaque>conectada</destaque> aos seus sistemas",
+        "intro": "Leads, pedidos e pagamentos não precisam ser copiados à mão. Integramos sua página às ferramentas que você já usa para que os dados cheguem sozinhos ao lugar certo.",
+        "incluso": [
+          "Mapeamento dos dados e do fluxo de integração",
+          "Envio de leads para RD Station, HubSpot e outros CRMs",
+          "Pagamento online com Stripe, PagSeguro ou Hotmart",
+          "Webhooks personalizados para seus sistemas",
+          "Mensagens e notificações via WhatsApp Business",
+          "Integração com ERPs e planilhas",
+          "Tratamento de erros e tentativas automáticas",
+          "Documentação do que foi integrado"
+        ],
+        "beneficios": [
+          { "titulo": "Menos trabalho manual", "texto": "Os dados fluem automaticamente da página para o CRM, o ERP ou a planilha, sem copiar e colar." },
+          { "titulo": "Resposta mais rápida", "texto": "O time comercial recebe o lead na hora e consegue entrar em contato enquanto o interesse está alto." },
+          { "titulo": "Dados confiáveis", "texto": "Validação e tratamento de erros evitam leads perdidos ou duplicados no meio do caminho." }
+        ],
+        "idealPara": [
+          "Empresas que usam CRM no processo comercial",
+          "Vendas online com pagamento na própria página",
+          "Times que atendem por WhatsApp",
+          "Negócios com sistemas próprios ou ERP"
+        ],
+        "faq": [
+          { "pergunta": "Vocês integram com qualquer sistema?", "resposta": "Com qualquer sistema que ofereça API ou webhook. Os mais comuns são RD Station, HubSpot, Stripe, PagSeguro, Hotmart e WhatsApp Business; para outros, avaliamos a documentação no briefing." },
+          { "pergunta": "Posso integrar uma página que já existe?", "resposta": "Sim. Analisamos a página atual e dizemos na proposta se a integração pode ser feita nela ou se vale a pena reconstruí-la." },
+          { "pergunta": "Os dados dos meus clientes ficam seguros?", "resposta": "As integrações usam conexões criptografadas (HTTPS) e as chaves de acesso ficam no servidor, nunca expostas no navegador." },
+          { "pergunta": "E se a integração parar de funcionar?", "resposta": "Configuramos tratamento de erros e alertas. Durante os 30 dias de suporte, corrigimos qualquer falha sem custo adicional." }
+        ]
+      },
+      "proposta": {
+        "metaTitle": "Formulário com Envio Automático de Proposta por E-mail",
+        "metaDescription": "Formulário inteligente que captura o lead e envia a proposta formatada por e-mail em segundos, com notificação imediata e anti-spam. Solicite sua proposta.",
+        "headline": "Propostas enviadas em <destaque>segundos</destaque>, não em dias",
+        "intro": "O cliente preenche o formulário e recebe a proposta formatada por e-mail na mesma hora. Você é notificado imediatamente e pode focar em fechar o negócio.",
+        "incluso": [
+          "Formulário inteligente com validação dos campos",
+          "Modelo de proposta em e-mail com a sua marca",
+          "E-mail transacional com boa entregabilidade",
+          "Notificação imediata para você ou seu time",
+          "Proteção anti-spam sem atrapalhar o cliente",
+          "Limite de tentativas contra abuso",
+          "Envio do lead para CRM ou planilha (opcional)",
+          "Testes de envio nos principais provedores de e-mail"
+        ],
+        "beneficios": [
+          { "titulo": "Atendimento instantâneo", "texto": "O cliente recebe a resposta enquanto ainda está pensando na sua empresa — não dias depois." },
+          { "titulo": "Padrão profissional", "texto": "Toda proposta sai com o mesmo visual, as mesmas informações e sem erros de digitação." },
+          { "titulo": "Menos spam, mais leads reais", "texto": "Filtros invisíveis bloqueiam robôs sem colocar obstáculos para quem é cliente de verdade." }
+        ],
+        "idealPara": [
+          "Prestadores de serviço com orçamentos frequentes",
+          "Agências e consultorias",
+          "Empresas com tabela de planos ou pacotes",
+          "Times comerciais que querem responder mais rápido"
+        ],
+        "faq": [
+          { "pergunta": "A proposta pode ter valores diferentes conforme a escolha do cliente?", "resposta": "Sim. A proposta pode variar de acordo com o plano, a quantidade ou outras opções escolhidas no formulário." },
+          { "pergunta": "Os e-mails vão cair no spam?", "resposta": "Usamos um serviço de e-mail transacional e configuramos a autenticação do seu domínio (SPF, DKIM e DMARC) para maximizar a entrega na caixa de entrada." },
+          { "pergunta": "Posso usar o formulário na minha página atual?", "resposta": "Sim. O formulário pode ser incluído em uma página nova ou adaptado ao site que você já tem." },
+          { "pergunta": "Quem recebe a notificação do novo lead?", "resposta": "Quem você definir: um ou vários e-mails do seu time, e opcionalmente o seu CRM." }
+        ]
+      },
+      "analytics": {
+        "metaTitle": "Analytics e Rastreamento: GA4, Meta Pixel, GTM e Heatmaps",
+        "metaDescription": "Instalação e configuração de Google Analytics 4, Meta Pixel com API de Conversões, Google Tag Manager e heatmaps para saber de onde vêm seus leads.",
+        "headline": "Saiba exatamente <destaque>de onde vêm</destaque> seus clientes",
+        "intro": "Instalamos e configuramos as ferramentas de medição para que cada lead, clique e venda seja registrado — e você invista mais no que dá resultado.",
+        "incluso": [
+          "Google Analytics 4 com eventos de conversão",
+          "Google Tag Manager organizado e documentado",
+          "Meta Pixel com API de Conversões (CAPI)",
+          "Tag de conversão do Google Ads",
+          "Heatmaps e gravações de sessão (Hotjar ou similar)",
+          "Padronização de UTMs para suas campanhas",
+          "Testes e validação de todos os eventos",
+          "Orientação para ler os principais relatórios"
+        ],
+        "beneficios": [
+          { "titulo": "Investimento com direção", "texto": "Descubra quais campanhas e canais trazem clientes e corte o que só gasta verba." },
+          { "titulo": "Anúncios mais eficientes", "texto": "Com conversões bem medidas, os algoritmos do Google e da Meta otimizam melhor suas campanhas." },
+          { "titulo": "Entenda o comportamento", "texto": "Heatmaps mostram onde o visitante clica, até onde rola e em que ponto desiste." }
+        ],
+        "idealPara": [
+          "Quem investe em tráfego pago",
+          "Páginas que recebem visitas mas convertem pouco",
+          "Empresas que nunca configuraram a medição",
+          "Migração para o Google Analytics 4"
+        ],
+        "faq": [
+          { "pergunta": "Vocês configuram o rastreamento em um site que já existe?", "resposta": "Sim. Podemos instalar e organizar a medição em páginas criadas por nós ou por terceiros, desde que tenhamos acesso para incluir os scripts." },
+          { "pergunta": "Por que usar a API de Conversões da Meta?", "resposta": "Ela envia os eventos pelo servidor, além do navegador. Isso reduz perdas causadas por bloqueadores e restrições de privacidade e melhora a otimização dos anúncios." },
+          { "pergunta": "O rastreamento respeita a LGPD?", "resposta": "Configuramos a medição conforme a política de privacidade do seu site e podemos incluir um aviso de cookies para registrar o consentimento do visitante." },
+          { "pergunta": "Eu fico com o acesso às contas?", "resposta": "Sim. As contas de Analytics, Tag Manager e Pixel ficam no seu nome; nós apenas recebemos acesso para configurar." }
+        ]
+      },
+      "hospedagem": {
+        "metaTitle": "Hospedagem e Deploy com HTTPS, CDN Global e Domínio Próprio",
+        "metaDescription": "Publicamos sua página em domínio próprio com SSL gratuito, CDN global, uptime de 99,9% e deploy em minutos. Solicite sua proposta grátis.",
+        "headline": "Sua página no ar, <destaque>rápida e segura</destaque>",
+        "intro": "Cuidamos de toda a parte técnica da publicação: domínio, certificado de segurança, CDN e monitoramento. Sua página abre rápido em qualquer lugar e fica disponível 24 horas por dia.",
+        "incluso": [
+          "Configuração do domínio próprio e DNS",
+          "Certificado SSL (HTTPS) gratuito e renovado automaticamente",
+          "CDN global para carregamento rápido",
+          "Uptime de 99,9%",
+          "Deploy em minutos a cada atualização",
+          "Redirecionamentos de endereços antigos",
+          "Sitemap e robots.txt configurados",
+          "Monitoramento de disponibilidade"
+        ],
+        "beneficios": [
+          { "titulo": "Velocidade em qualquer lugar", "texto": "A CDN entrega a página a partir do servidor mais próximo do visitante, no Brasil ou no exterior." },
+          { "titulo": "Segurança e confiança", "texto": "HTTPS em todas as páginas: o navegador mostra o cadeado e o Google valoriza sites seguros." },
+          { "titulo": "Sem dor de cabeça", "texto": "Nada de painéis de hospedagem complicados. Você pede a alteração e ela vai ao ar em minutos." }
+        ],
+        "idealPara": [
+          "Quem ainda não tem domínio ou hospedagem",
+          "Páginas lentas em hospedagens compartilhadas",
+          "Migração de sites antigos sem perder links",
+          "Campanhas com picos de acesso"
+        ],
+        "faq": [
+          { "pergunta": "Preciso já ter um domínio?", "resposta": "Não. Ajudamos você a registrar o domínio em seu nome. Se já tiver um, apenas configuramos o apontamento." },
+          { "pergunta": "Vou perder posição no Google ao migrar?", "resposta": "Configuramos redirecionamentos dos endereços antigos para os novos, o que preserva os links e a relevância já conquistada." },
+          { "pergunta": "A página aguenta muitos acessos ao mesmo tempo?", "resposta": "Sim. A CDN distribui a carga e absorve picos de tráfego, como os de uma campanha ou lançamento." },
+          { "pergunta": "Como faço para atualizar a página depois?", "resposta": "Você nos envia a alteração e publicamos em minutos. Durante os 30 dias de suporte, ajustes técnicos estão inclusos." }
+        ]
+      }
+    }
+  },
   "Footer": {
     "about": "Transformando ideias em páginas que vendem. Landing pages e hotsites de alta conversão com integração de APIs e automações.",
     "navTitle": "Navegação",
@@ -206,6 +434,8 @@
       "landingPage": "Landing Page",
       "hotsite": "Hotsite de Evento",
       "apis": "Integração com APIs",
+      "proposta": "Envio de Proposta",
+      "analytics": "Analytics & Rastreamento",
       "hospedagem": "Hospedagem & Deploy"
     },
     "copyright": "© 2026 <strong>Plivaro</strong>. Todos os direitos reservados.",

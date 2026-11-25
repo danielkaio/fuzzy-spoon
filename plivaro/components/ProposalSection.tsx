@@ -2,6 +2,7 @@ import { Clock, HandCoins, Headset, Mail, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Eyebrow } from "./SectionHeader";
 import { ProposalForm } from "./ProposalForm";
+import { destaque } from "./RichText";
 import { site } from "@/lib/site";
 
 const confianca = [
@@ -27,9 +28,7 @@ export function ProposalSection() {
             id="proposta-titulo"
             className="mt-4 text-3xl font-extrabold tracking-tight text-fg sm:text-4xl"
           >
-            {t.rich("title", {
-              destaque: (chunks) => <span className="text-gradient">{chunks}</span>,
-            })}
+            {t.rich("title", { destaque })}
           </h2>
           <p className="mt-4 text-muted">{t("description")}</p>
 

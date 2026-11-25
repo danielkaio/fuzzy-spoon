@@ -233,16 +233,7 @@ export function ProposalForm() {
       </div>
 
       <p className="mt-5 text-center text-xs text-muted">
-        {t.rich("privacidade", {
-          link: (chunks) => (
-            <Link
-              href="/politica-privacidade-cookies#privacidade"
-              className="font-medium text-brand-dark underline-offset-2 hover:underline"
-            >
-              {chunks}
-            </Link>
-          ),
-        })}
+        {t.rich("privacidade", { link: linkPrivacidade })}
       </p>
     </form>
   );
@@ -290,4 +281,16 @@ function ariaErro(id: string, erro?: string) {
 
 function borda(erro?: string) {
   return erro ? "border-red-400" : "border-line";
+}
+
+/** <link>…</link> do aviso de privacidade abaixo do botão de envio. */
+function linkPrivacidade(chunks: React.ReactNode) {
+  return (
+    <Link
+      href="/politica-privacidade-cookies#privacidade"
+      className="font-medium text-brand-dark underline-offset-2 hover:underline"
+    >
+      {chunks}
+    </Link>
+  );
 }

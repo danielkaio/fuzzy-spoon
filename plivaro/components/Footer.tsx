@@ -2,7 +2,7 @@ import { Clock, Mail, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
-import { site } from "@/lib/site";
+import { serviceHref, services, site } from "@/lib/site";
 
 const navegacao = [
   { href: "/#servicos", key: "servicos" },
@@ -11,7 +11,6 @@ const navegacao = [
   { href: "/#proposta", key: "faleConosco" },
 ] as const;
 
-const servicos = ["landingPage", "hotsite", "apis", "hospedagem"] as const;
 
 export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
   const t = useTranslations("Footer");
@@ -45,10 +44,10 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
           </FooterCol>
 
           <FooterCol title={t("servicesTitle")}>
-            {servicos.map((s) => (
-              <li key={s}>
-                <Link href="/#servicos" className="footer-link py-1">
-                  {t(`servicos.${s}`)}
+            {services.map((s) => (
+              <li key={s.key}>
+                <Link href={serviceHref(s)} className="footer-link py-1">
+                  {t(`servicos.${s.key}`)}
                 </Link>
               </li>
             ))}
@@ -79,9 +78,7 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 text-center text-[0.82rem] text-white/50 sm:flex-row sm:px-6 sm:text-left">
           <p>
-            {t.rich("copyright", {
-              strong: (chunks) => <strong className="text-white/75">{chunks}</strong>,
-            })}
+            {t.rich("copyright", { strong: negrito })}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-2.5">
             <Link
@@ -105,6 +102,10 @@ export function Footer({ compact = false }: Readonly<{ compact?: boolean }>) {
     </footer>
   );
 }
+
+const negrito = (chunks: React.ReactNode) => (
+  <strong className="text-white/75">{chunks}</strong>
+);
 
 function FooterCol({
   title,

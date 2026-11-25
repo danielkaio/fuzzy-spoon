@@ -129,16 +129,7 @@ export default async function PoliticaPage() {
 
             <Artigo id="contato" titulo={t("contato.titulo")}>
               <p>
-                {t.rich("contato.p1", {
-                  email: () => (
-                    <a
-                      href={`mailto:${site.privacyEmail}`}
-                      className="font-semibold text-brand-dark hover:underline"
-                    >
-                      {site.privacyEmail}
-                    </a>
-                  ),
-                })}
+                {t.rich("contato.p1", { email: emailPrivacidade })}
               </p>
               <p>{t("contato.p2")}</p>
             </Artigo>
@@ -159,6 +150,18 @@ export default async function PoliticaPage() {
       </main>
       <Footer compact />
     </>
+  );
+}
+
+/** <email></email> do texto de contato. */
+function emailPrivacidade() {
+  return (
+    <a
+      href={`mailto:${site.privacyEmail}`}
+      className="font-semibold text-brand-dark hover:underline"
+    >
+      {site.privacyEmail}
+    </a>
   );
 }
 

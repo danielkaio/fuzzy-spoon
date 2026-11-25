@@ -7,6 +7,10 @@ import {
   Zap,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { destaque } from "./RichText";
+
+/** <br></br> do título: só quebra a linha a partir do breakpoint sm. */
+const quebra = () => <br className="hidden sm:block" />;
 
 const garantias = ["contrato", "entrega", "suporte"] as const;
 
@@ -37,10 +41,7 @@ export function Hero() {
             id="hero-titulo"
             className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]"
           >
-            {t.rich("title", {
-              br: () => <br className="hidden sm:block" />,
-              destaque: (chunks) => <span className="text-gradient">{chunks}</span>,
-            })}
+            {t.rich("title", { br: quebra, destaque })}
           </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/65 lg:mx-0">

@@ -1,7 +1,8 @@
-import { Check } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SectionHeader } from "./SectionHeader";
-import { services } from "@/lib/site";
+import { Link } from "@/i18n/navigation";
+import { serviceHref, services } from "@/lib/site";
 
 export function Services() {
   const t = useTranslations("Services");
@@ -21,11 +22,11 @@ export function Services() {
         />
 
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ key, icon: Icon, color }) => (
+          {services.map(({ key, slug, icon: Icon, color }) => (
             <li
               key={key}
               style={{ "--c": color } as React.CSSProperties}
-              className="reveal group rounded-2xl border border-line bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-brand/25 hover:shadow-[0_12px_40px_rgba(108,99,255,0.14)]"
+              className="reveal group relative flex flex-col rounded-2xl border border-line bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-brand/25 hover:shadow-[0_12px_40px_rgba(108,99,255,0.14)]"
             >
               <div className="mb-5 grid size-12 place-items-center rounded-xl bg-[color-mix(in_srgb,var(--c)_12%,transparent)] text-(--c) transition-transform group-hover:scale-110">
                 <Icon className="size-6" aria-hidden />
@@ -45,6 +46,18 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+              {/* O ::after estica o link por todo o card. */}
+              <Link
+                href={serviceHref({ slug })}
+                aria-label={t("learnMoreAria", { servico: t(`items.${key}.title`) })}
+                className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-(--c) after:absolute after:inset-0 after:rounded-2xl"
+              >
+                {t("learnMore")}
+                <ArrowRight
+                  className="size-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden
+                />
+              </Link>
             </li>
           ))}
         </ul>

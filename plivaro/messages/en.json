@@ -60,6 +60,8 @@
     "label": "What we deliver",
     "title": "Complete digital solutions",
     "description": "From building the page to integrating it with your systems — all in one place.",
+    "learnMore": "Learn more",
+    "learnMoreAria": "Learn more about {servico}",
     "items": {
       "landingPage": {
         "title": "Landing Page",
@@ -197,6 +199,232 @@
       "erroConexao": "Connection error. Check your internet and try again."
     }
   },
+  "ServicePage": {
+    "breadcrumb": {
+      "ariaLabel": "You are here",
+      "home": "Home",
+      "services": "Services"
+    },
+    "ctaPrimary": "Request a free proposal",
+    "ctaSecondary": "See all services",
+    "destaquesTitulo": "Highlights",
+    "garantiasTitulo": "In every project",
+    "garantias": [
+      "Proposal within 2 hours",
+      "Unlimited reviews before launch",
+      "Technical support for 30 days after delivery"
+    ],
+    "inclusoLabel": "What’s included",
+    "inclusoTitle": "Everything you get",
+    "beneficiosLabel": "Why hire us",
+    "beneficiosTitle": "What changes for your business",
+    "idealTitulo": "Ideal for",
+    "faqLabel": "Questions",
+    "faqTitle": "Frequently asked questions",
+    "outrosLabel": "Other services",
+    "outrosTitle": "Combine with other solutions",
+    "outrosDescription": "Our services work together: build the package that makes sense for your project.",
+    "items": {
+      "landingPage": {
+        "metaTitle": "High-Converting Landing Page Design",
+        "metaDescription": "Landing pages with professional design, persuasive copy, on-page SEO and lightning-fast loading. Ready in up to 5 business days. Request your free proposal.",
+        "headline": "Landing pages built to <destaque>sell</destaque>",
+        "intro": "A single page focused on one goal: turning visitors into leads or customers. We handle the design, copy, speed and tracking — you handle the sales.",
+        "incluso": [
+          "Custom design aligned with your brand",
+          "Responsive, mobile-first layout",
+          "Conversion-focused copy structure",
+          "On-page SEO: titles, meta tags and structured data",
+          "Lead capture form",
+          "Tracking pixel and conversion events",
+          "Image optimization and fast loading",
+          "WhatsApp button and social media links"
+        ],
+        "beneficios": [
+          { "titulo": "More conversions", "texto": "Every section has a job: attract, persuade and drive the click. No distractions pulling visitors off track." },
+          { "titulo": "Fast loading", "texto": "A lightweight, optimized page that opens fast even on mobile connections — so your ad budget isn’t wasted." },
+          { "titulo": "Measured results", "texto": "Tracking set up from day one, so you know how many visitors became leads." }
+        ],
+        "idealPara": [
+          "Product and online course launches",
+          "Google Ads and Meta Ads campaigns",
+          "Lead generation for service providers",
+          "Quickly validating a business idea"
+        ],
+        "faq": [
+          { "pergunta": "How long does a landing page take?", "resposta": "Up to 5 business days after the briefing is approved, for most projects. Pages with more complex integrations may take a little longer — the exact timeline is in the proposal." },
+          { "pergunta": "How much does a landing page cost?", "resposta": "The Starter plan starts at R$ 497. The final price depends on the number of sections, the content and the integrations; you get a detailed proposal within 2 hours." },
+          { "pergunta": "Do I need to provide the copy and images?", "resposta": "Not necessarily. We can write the copy from the briefing and use licensed stock images. If you already have material, even better." },
+          { "pergunta": "Can I request changes after it’s done?", "resposta": "Yes. Reviews are unlimited until you approve the launch, and technical support continues for 30 days after delivery." }
+        ]
+      },
+      "hotsite": {
+        "metaTitle": "Microsites for Campaigns, Events and Launches",
+        "metaDescription": "Microsites with countdowns, sign-ups, waiting lists and automatic emails for campaigns, events and launches. Request your free proposal.",
+        "headline": "Microsites that make your launch <destaque>happen</destaque>",
+        "intro": "A campaign page with a set date: countdown, sign-ups, waiting list and automatic notifications to keep your audience engaged until the big day.",
+        "incluso": [
+          "Themed design for the campaign or event",
+          "Dynamic countdown",
+          "Sign-up form or waiting list",
+          "Automatic confirmation email",
+          "Sections for schedule, speakers or offers",
+          "Integration with your email marketing tool",
+          "Tracking of sign-ups and traffic sources",
+          "Custom thank-you page"
+        ],
+        "beneficios": [
+          { "titulo": "Sense of urgency", "texto": "The countdown and limited spots encourage visitors to sign up now, not later." },
+          { "titulo": "A warmed-up audience", "texto": "Everyone who joins the list gets an instant confirmation and arrives at launch already interested." },
+          { "titulo": "Campaign under control", "texto": "Follow sign-ups and traffic sources in real time to fine-tune your promotion." }
+        ],
+        "idealPara": [
+          "In-person and online events",
+          "Digital product launches",
+          "Seasonal campaigns and promotions",
+          "Pre-sales and product waiting lists"
+        ],
+        "faq": [
+          { "pergunta": "What’s the difference between a microsite and a landing page?", "resposta": "A landing page focuses on an ongoing conversion. A microsite is built for a campaign with a set date and usually has more content: schedule, countdown, sign-ups and automatic communication." },
+          { "pergunta": "Does the microsite stay online after the event?", "resposta": "Yes, if you want. We can turn it into a recordings page, a next-edition page, or redirect it to another address." },
+          { "pergunta": "How much does a microsite cost?", "resposta": "The Pro plan, with a microsite and integrations, starts at R$ 997. The final price depends on scope and is detailed in the proposal." },
+          { "pergunta": "Can I export the list of sign-ups?", "resposta": "Yes. Sign-ups can go straight to your email marketing tool or CRM, or be exported as a spreadsheet." }
+        ]
+      },
+      "apis": {
+        "metaTitle": "API, CRM and Payment Integrations",
+        "metaDescription": "We connect your page to CRMs, ERPs, WhatsApp Business, Stripe, PagSeguro, Hotmart, RD Station, HubSpot and custom webhooks. Request your proposal.",
+        "headline": "Your page <destaque>connected</destaque> to your systems",
+        "intro": "Leads, orders and payments shouldn’t be copied by hand. We integrate your page with the tools you already use so data reaches the right place on its own.",
+        "incluso": [
+          "Mapping of the data and integration flow",
+          "Lead delivery to RD Station, HubSpot and other CRMs",
+          "Online payments with Stripe, PagSeguro or Hotmart",
+          "Custom webhooks for your systems",
+          "Messages and notifications via WhatsApp Business",
+          "Integration with ERPs and spreadsheets",
+          "Error handling and automatic retries",
+          "Documentation of everything integrated"
+        ],
+        "beneficios": [
+          { "titulo": "Less manual work", "texto": "Data flows automatically from the page to your CRM, ERP or spreadsheet — no copy and paste." },
+          { "titulo": "Faster response", "texto": "Your sales team gets the lead instantly and can reach out while interest is high." },
+          { "titulo": "Reliable data", "texto": "Validation and error handling prevent leads from getting lost or duplicated along the way." }
+        ],
+        "idealPara": [
+          "Companies that use a CRM in their sales process",
+          "Online sales with checkout on the page itself",
+          "Teams that support customers on WhatsApp",
+          "Businesses with in-house systems or an ERP"
+        ],
+        "faq": [
+          { "pergunta": "Do you integrate with any system?", "resposta": "With any system that offers an API or webhook. The most common are RD Station, HubSpot, Stripe, PagSeguro, Hotmart and WhatsApp Business; for others, we review the documentation during the briefing." },
+          { "pergunta": "Can you integrate a page that already exists?", "resposta": "Yes. We review your current page and tell you in the proposal whether the integration can be done there or whether rebuilding it is worthwhile." },
+          { "pergunta": "Is my customers’ data safe?", "resposta": "Integrations use encrypted connections (HTTPS) and access keys stay on the server, never exposed in the browser." },
+          { "pergunta": "What if the integration stops working?", "resposta": "We set up error handling and alerts. During the 30 days of support, we fix any failure at no extra cost." }
+        ]
+      },
+      "proposta": {
+        "metaTitle": "Forms with Automatic Proposal Delivery by Email",
+        "metaDescription": "A smart form that captures the lead and emails a formatted proposal within seconds, with instant notification and anti-spam. Request your proposal.",
+        "headline": "Proposals sent in <destaque>seconds</destaque>, not days",
+        "intro": "Your customer fills out the form and gets a formatted proposal by email right away. You’re notified instantly and can focus on closing the deal.",
+        "incluso": [
+          "Smart form with field validation",
+          "Branded proposal email template",
+          "Transactional email with strong deliverability",
+          "Instant notification for you or your team",
+          "Anti-spam protection that doesn’t get in the customer’s way",
+          "Rate limiting against abuse",
+          "Lead delivery to a CRM or spreadsheet (optional)",
+          "Delivery tests on the major email providers"
+        ],
+        "beneficios": [
+          { "titulo": "Instant response", "texto": "Customers get an answer while they’re still thinking about your company — not days later." },
+          { "titulo": "Professional standard", "texto": "Every proposal goes out with the same look, the same information and no typos." },
+          { "titulo": "Less spam, more real leads", "texto": "Invisible filters block bots without putting obstacles in front of real customers." }
+        ],
+        "idealPara": [
+          "Service providers who quote often",
+          "Agencies and consultancies",
+          "Companies with a plan or package price list",
+          "Sales teams that want to respond faster"
+        ],
+        "faq": [
+          { "pergunta": "Can the proposal show different prices based on the customer’s choice?", "resposta": "Yes. The proposal can change based on the plan, quantity or other options selected in the form." },
+          { "pergunta": "Will the emails land in spam?", "resposta": "We use a transactional email service and set up your domain’s authentication (SPF, DKIM and DMARC) to maximize inbox delivery." },
+          { "pergunta": "Can I use the form on my current page?", "resposta": "Yes. The form can be added to a new page or adapted to the site you already have." },
+          { "pergunta": "Who gets notified about a new lead?", "resposta": "Whoever you choose: one or more emails on your team, and optionally your CRM." }
+        ]
+      },
+      "analytics": {
+        "metaTitle": "Analytics and Tracking: GA4, Meta Pixel, GTM and Heatmaps",
+        "metaDescription": "Setup and configuration of Google Analytics 4, Meta Pixel with the Conversions API, Google Tag Manager and heatmaps so you know where your leads come from.",
+        "headline": "Know exactly <destaque>where</destaque> your customers come from",
+        "intro": "We install and configure your measurement tools so every lead, click and sale is recorded — and you invest more in what works.",
+        "incluso": [
+          "Google Analytics 4 with conversion events",
+          "Organized, documented Google Tag Manager",
+          "Meta Pixel with the Conversions API (CAPI)",
+          "Google Ads conversion tag",
+          "Heatmaps and session recordings (Hotjar or similar)",
+          "Standardized UTMs for your campaigns",
+          "Testing and validation of every event",
+          "Guidance on reading the key reports"
+        ],
+        "beneficios": [
+          { "titulo": "Investment with direction", "texto": "Find out which campaigns and channels bring customers, and cut what only burns budget." },
+          { "titulo": "More efficient ads", "texto": "With well-measured conversions, Google’s and Meta’s algorithms optimize your campaigns better." },
+          { "titulo": "Understand behavior", "texto": "Heatmaps show where visitors click, how far they scroll and where they give up." }
+        ],
+        "idealPara": [
+          "Anyone investing in paid traffic",
+          "Pages that get visits but convert poorly",
+          "Companies that never set up measurement",
+          "Migrating to Google Analytics 4"
+        ],
+        "faq": [
+          { "pergunta": "Can you set up tracking on an existing site?", "resposta": "Yes. We can install and organize measurement on pages built by us or by others, as long as we have access to add the scripts." },
+          { "pergunta": "Why use Meta’s Conversions API?", "resposta": "It sends events from the server as well as the browser. That reduces losses from blockers and privacy restrictions and improves ad optimization." },
+          { "pergunta": "Does the tracking comply with privacy laws (LGPD)?", "resposta": "We configure measurement according to your site’s privacy policy and can add a cookie notice to record visitor consent." },
+          { "pergunta": "Do I keep access to the accounts?", "resposta": "Yes. The Analytics, Tag Manager and Pixel accounts are in your name; we only get access to configure them." }
+        ]
+      },
+      "hospedagem": {
+        "metaTitle": "Hosting and Deployment with HTTPS, Global CDN and Your Own Domain",
+        "metaDescription": "We publish your page on your own domain with free SSL, a global CDN, 99.9% uptime and deploys in minutes. Request your free proposal.",
+        "headline": "Your page live, <destaque>fast and secure</destaque>",
+        "intro": "We take care of every technical part of going live: domain, security certificate, CDN and monitoring. Your page loads fast anywhere and stays available 24 hours a day.",
+        "incluso": [
+          "Custom domain and DNS setup",
+          "Free SSL certificate (HTTPS) with automatic renewal",
+          "Global CDN for fast loading",
+          "99.9% uptime",
+          "Deploys in minutes for every update",
+          "Redirects from old addresses",
+          "Sitemap and robots.txt set up",
+          "Availability monitoring"
+        ],
+        "beneficios": [
+          { "titulo": "Speed everywhere", "texto": "The CDN serves your page from the server closest to each visitor, in Brazil or abroad." },
+          { "titulo": "Security and trust", "texto": "HTTPS on every page: browsers show the padlock and Google favors secure sites." },
+          { "titulo": "No headaches", "texto": "No complicated hosting panels. You ask for a change and it goes live in minutes." }
+        ],
+        "idealPara": [
+          "Anyone without a domain or hosting yet",
+          "Slow pages on shared hosting",
+          "Migrating old sites without losing links",
+          "Campaigns with traffic spikes"
+        ],
+        "faq": [
+          { "pergunta": "Do I need to already have a domain?", "resposta": "No. We help you register a domain in your name. If you already have one, we just point it to the new page." },
+          { "pergunta": "Will I lose Google rankings when migrating?", "resposta": "We set up redirects from the old addresses to the new ones, which preserves your links and the relevance you’ve already earned." },
+          { "pergunta": "Can the page handle a lot of simultaneous visits?", "resposta": "Yes. The CDN spreads the load and absorbs traffic spikes, like those from a campaign or launch." },
+          { "pergunta": "How do I update the page later?", "resposta": "Send us the change and we publish it in minutes. During the 30 days of support, technical tweaks are included." }
+        ]
+      }
+    }
+  },
   "Footer": {
     "about": "Turning ideas into pages that sell. High-converting landing pages and microsites with API integrations and automation.",
     "navTitle": "Navigation",
@@ -206,6 +434,8 @@
       "landingPage": "Landing Page",
       "hotsite": "Event Microsite",
       "apis": "API Integration",
+      "proposta": "Proposal Delivery",
+      "analytics": "Analytics & Tracking",
       "hospedagem": "Hosting & Deployment"
     },
     "copyright": "© 2026 <strong>Plivaro</strong>. All rights reserved.",
