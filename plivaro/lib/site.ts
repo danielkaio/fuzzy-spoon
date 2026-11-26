@@ -18,8 +18,8 @@ export const SITE_URL = (
 
 export const site = {
   name: "Plivaro",
-  contactEmail: "daniel@plivaro.com",
-  privacyEmail: "abidala@plivaro.com",
+  contactEmail: "daniel@plivaro.com.br",
+  privacyEmail: "abidala@plivaro.com.br",
   gaId: "G-4LMB7WFWT4",
   adsenseClient: "ca-pub-8360693037438432",
 };
